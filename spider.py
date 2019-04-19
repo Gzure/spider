@@ -91,11 +91,14 @@ def add_task():
 
     task = request.form.copy().to_dict()
 
-    for key, value in task.items():
-        print key
-        print value
-        if value.isdigit():
-            task[key] = int(value)
+    trigger_value = task['trigger_value']
+    trigger_dict = {}
+    for entry in trigger_value.split(','):
+        key, value = entry.split(':', 1)
+        trigger_dict[key] = int(value) if value.isdigit() else value
+
+    del task['trigger_value']
+    task.update(trigger_dict)
 
     try:
         if scheduler.get_job(task['id']):
