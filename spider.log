@@ -1,0 +1,184 @@
+hahahahahahhahahah
+%(asctime)s %(levelname)s %(module)s[line:%(lineno)d] %(message)s
+%(asctime)s %(levelname)s %(module)s[line:%(lineno)d] %(message)s
+2019-04-18 16:49:43,237 WARNING spider[line:28] hahahahahahhahahah
+2019-04-18 16:58:06,293 INFO spider[line:31] hahahahahahhahahah
+2019-04-18 16:58:34,526 INFO spider[line:31] hahahahahahhahahah
+2019-04-18 16:59:56,236 INFO spider[line:32] hahahahahahhahahah
+2019-04-18 18:39:36,357 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 101, in add_task
+    return jsonify(dict(error_message=str(e)), status=500)
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+2019-04-18 19:05:26,976 ERROR spider[line:101] unsupported type for timedelta seconds component: unicode
+Traceback (most recent call last):
+  File "D:/pica8/spider/spider.py", line 96, in add_task
+    job = scheduler.add_job(**task)
+  File "D:\Python27\lib\site-packages\flask_apscheduler\scheduler.py", line 160, in add_job
+    return self._scheduler.add_job(**job_def)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 413, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 907, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 892, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "D:\Python27\lib\site-packages\apscheduler\triggers\interval.py", line 31, in __init__
+    seconds=seconds)
+TypeError: unsupported type for timedelta seconds component: unicode
+2019-04-18 19:05:26,977 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 102, in add_task
+    return jsonify(dict(error_message=str(e)), status=500)
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+2019-04-18 19:06:17,471 ERROR spider[line:101] unsupported type for timedelta seconds component: unicode
+Traceback (most recent call last):
+  File "D:/pica8/spider/spider.py", line 96, in add_task
+    job = scheduler.add_job(**task)
+  File "D:\Python27\lib\site-packages\flask_apscheduler\scheduler.py", line 160, in add_job
+    return self._scheduler.add_job(**job_def)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 413, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 907, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 892, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "D:\Python27\lib\site-packages\apscheduler\triggers\interval.py", line 31, in __init__
+    seconds=seconds)
+TypeError: unsupported type for timedelta seconds component: unicode
+2019-04-18 19:06:20,140 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 102, in add_task
+    return jsonify(dict(error_message=str(e)), status=500)
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+2019-04-18 19:07:10,361 ERROR spider[line:101] unsupported type for timedelta seconds component: unicode
+Traceback (most recent call last):
+  File "D:/pica8/spider/spider.py", line 96, in add_task
+    job = scheduler.add_job(**task)
+  File "D:\Python27\lib\site-packages\flask_apscheduler\scheduler.py", line 160, in add_job
+    return self._scheduler.add_job(**job_def)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 413, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 907, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 892, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "D:\Python27\lib\site-packages\apscheduler\triggers\interval.py", line 31, in __init__
+    seconds=seconds)
+TypeError: unsupported type for timedelta seconds component: unicode
+2019-04-18 19:07:10,362 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 102, in add_task
+    return jsonify(dict(error_message=str(e)), status=500)
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+2019-04-18 19:09:36,203 ERROR spider[line:101] unsupported type for timedelta seconds component: unicode
+Traceback (most recent call last):
+  File "D:/pica8/spider/spider.py", line 96, in add_task
+    job = scheduler.add_job(**task)
+  File "D:\Python27\lib\site-packages\flask_apscheduler\scheduler.py", line 160, in add_job
+    return self._scheduler.add_job(**job_def)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 413, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 907, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 892, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "D:\Python27\lib\site-packages\apscheduler\triggers\interval.py", line 31, in __init__
+    seconds=seconds)
+TypeError: unsupported type for timedelta seconds component: unicode
+2019-04-18 19:09:36,204 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 102, in add_task
+    return jsonify(dict(error_message=str(e)), status=500)
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
+2019-04-18 19:12:35,243 ERROR spider[line:101] unsupported type for timedelta seconds component: unicode
+Traceback (most recent call last):
+  File "D:/pica8/spider/spider.py", line 96, in add_task
+    if value.isdigit():
+  File "D:\Python27\lib\site-packages\flask_apscheduler\scheduler.py", line 160, in add_job
+    return self._scheduler.add_job(**job_def)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 413, in add_job
+    'trigger': self._create_trigger(trigger, trigger_args),
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 907, in _create_trigger
+    return self._create_plugin_instance('trigger', trigger, trigger_args)
+  File "D:\Python27\lib\site-packages\apscheduler\schedulers\base.py", line 892, in _create_plugin_instance
+    return plugin_cls(**constructor_kwargs)
+  File "D:\Python27\lib\site-packages\apscheduler\triggers\interval.py", line 31, in __init__
+    seconds=seconds)
+TypeError: unsupported type for timedelta seconds component: unicode
+2019-04-18 19:12:35,244 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/spider/spider.py", line 102, in add_task
+    except ConflictingIdError:
+  File "D:\Python27\lib\site-packages\flask\json.py", line 256, in jsonify
+    raise TypeError('jsonify() behavior undefined when passed both args and kwargs')
+TypeError: jsonify() behavior undefined when passed both args and kwargs
