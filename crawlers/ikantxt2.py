@@ -6,13 +6,22 @@ import time
 from pybloom import BloomFilter
 import os
 import codecs
+from flask import current_app
+
+try:
+    LOG = current_app.logger
+except:
+    import logging
+    LOG = logging.getLogger(__name__)
 
 features = 'html.parser'
 
 
 url = 'https://www.biqukan.com'
-bf_file = 'bf'
-
+wan_ben_url = 'https://www.biqukan.com/wanben'
+bf_file = 'ikantxt2'
+# base_dir = u'/downloads/小说'
+base_dir = u'小说'
 content_f = re.compile(u'.*正文卷')
 
 req = requests.get(url = url)
@@ -20,10 +29,10 @@ html = req.text
 index = BeautifulSoup(html, features=features)
 
 if os.path.exists(bf_file):
-    print 'bs from file'
+    LOG.info('bs from file')
     bf = BloomFilter.fromfile(open(bf_file, 'r'))
 else:
-    print 'init bs'
+    LOG.info('init bs')
     bf = BloomFilter(500000)
 
 
@@ -33,6 +42,34 @@ def find_title(name):
 
 def find_container(name):
     return index.find('h2', text=name).find_next()
+
+
+def find_wanben():
+    book_urls = []
+    req = requests.get(url=wan_ben_url)
+    html = req.text
+    wan_ben = BeautifulSoup(html, features=features)
+    container = wan_ben.find('h2', text='好看的完本小说小说最近更新列表').find_next()
+    for child in container.children:
+        type = child.find('span', 's1').string + u'(完本)'
+        a_ele = child.find('a')
+        name = a_ele.string
+        href = url + a_ele.get('href')
+        author = child.find('span', 's4').string
+        LOG.info(u'类型:{} 名称:{} 链接:{} 作者:{}'.format(type, name, href, author))
+        book_urls.append((type, name, author, href))
+
+    hot_bd = wan_ben.find('div', class_='hot bd')
+    items = hot_bd.find_all('div', class_='item')
+    for item in items:
+        type = u'unknown(完本)'
+        a_ele = item.find('a')
+        href = url + a_ele.get('href')
+        name = item.find('img').get('alt')
+        author = 'unknown'
+        LOG.info(u'类型:{} 名称:{} 链接:{} 作者:{}'.format(type, name, href, author))
+        book_urls.append((type, name, author, href))
+    return book_urls
 
 
 def find_recommend_block(name):
@@ -46,7 +83,7 @@ def find_recommend_block(name):
         name = a_ele.string
         href = url + a_ele.get('href')
         author = child.find('span', 's5').string
-        print('类型:{} 名称:{} 链接:{} 作者:{}'.format(type, name, href, author))
+        LOG.info(u'类型:{} 名称:{} 链接:{} 作者:{}'.format(type, name, href, author))
         book_urls.append((type, name, author, href))
     return book_urls
 
@@ -58,7 +95,7 @@ def find_type_block(name):
     container = find_container(name)
     top = container.find('div', class_='top').find('a')
     top_href = top.get('href')
-    print('top:{} url:{}'.format(top.img.get('alt'), url + top_href))
+    LOG.info(u'top:{} url:{}'.format(top.img.get('alt'), url + top_href))
     book_urls.append(top_href)
     others = container.find_all('li')
     for other in others:
@@ -66,7 +103,7 @@ def find_type_block(name):
         href = url + a_ele.get('href')
         book_name = a_ele.get('title')
         author = a_ele.next_sibling.lstrip('/')
-        print('类型:{} 名称:{} 链接:{} 作者:{}'.format(name, book_name, href, author))
+        LOG.info(u'类型:{} 名称:{} 链接:{} 作者:{}'.format(name, book_name, href, author))
         book_urls.append((name, book_name, author, href))
     return book_urls
 
@@ -82,7 +119,7 @@ def find_new_update_block():
         author = child.find('span', 's4').string
         section_name = a_ele[1].string
         section_href = url + a_ele[1].get('href')
-        print(u'类型:{} 名称:{} 链接:{} 作者:{} 章节:{} 章节链接:{}'.format(type, name, href, author, section_name, section_href))
+        LOG.info(u'类型:{} 名称:{} 链接:{} 作者:{} 章节:{} 章节链接:{}'.format(type, name, href, author, section_name, section_href))
         book_urls.append((type, name, author, href, section_name, section_href))
     return book_urls
 
@@ -90,14 +127,13 @@ def find_new_update_block():
 def find_new_storage_block():
     book_urls = []
     container = find_container('最新入库小说')
-    print(container)
     for child in container.children:
         book_type = child.find('span', 's1').string
         a_ele = child.find('a')
         name = a_ele.string
         href = url + a_ele.get('href')
         author = 'unknown'
-        print u'类型:%s 名称:%s 链接:%s 作者:%s' % (book_type, name, href, author)
+        LOG.info(u'类型:%s 名称:%s 链接:%s 作者:%s' % (book_type, name, href, author))
         book_urls.append((book_type, name, author, href))
     return book_urls
 
@@ -140,11 +176,17 @@ class downloader(object):
         self.author = author
         self.urls = []
         self.bfilter = bfilter
-        if not os.path.exists(type):
-            os.mkdir(type)
-        if not os.path.exists('%s/%s' % (type, author)):
-            os.mkdir('%s/%s' % (type, author))
-        self.f = codecs.open('%s/%s/%s.txt' % (type, author, name), 'a', 'utf-8')
+        if not os.path.exists(base_dir):
+            os.mkdir(base_dir)
+
+        type_path = '%s/%s' % (base_dir, type)
+        if not os.path.exists(type_path):
+            os.mkdir(type_path)
+        book_path = '%s/%s' % (type_path, author)
+        if not os.path.exists(book_path):
+            os.mkdir(book_path)
+        LOG.info('download %s to %s/%s.txt', name, book_path, name)
+        self.f = codecs.open(u'%s/%s.txt' % (book_path, name), 'a', 'utf-8')
 
     def get_download_url(self):
         req = requests.get(url = self.target)
@@ -153,8 +195,6 @@ class downloader(object):
         div_bf_2 = BeautifulSoup(str(div_bf), features=features)
         content_e = div_bf_2.find('dt', text=content_f)
         a = content_e.find_all_next('a')
-        for each in a[:1]:
-            print each.string
         for each in a:
             self.urls.append((each.string, self.server + each.get('href')))
 
@@ -164,7 +204,7 @@ class downloader(object):
                 req = requests.get(url = target)
                 break
             except:
-                print(target)
+                LOG.warn(target)
                 time.sleep(30)
 
         html = req.text
@@ -184,17 +224,17 @@ class downloader(object):
 
     def start(self):
         self.get_download_url()
-        print(u'开始下载%s:' % self.name)
+        LOG.info(u'开始下载%s:' % self.name)
         length = len(self.urls)
         for i, (section_name, url) in enumerate(self.urls):
             if not self.bfilter.add(url):
-                print 'section_name:%s, url:%s' % (section_name, url)
+                LOG.info('section_name:%s, url:%s' % (section_name, url))
                 self.writer(section_name, self.get_contents(url))
-                print(u"  已下载:%.2f%% 下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
+                LOG.info(u"  已下载:%.2f%% 下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
             else:
-                print 'section_name:%s, url:%s' % (section_name, url)
-                print(u"  已下载:%.2f%% 已下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
-        print(u'下载%s完成' % self.name)
+                LOG.info('section_name:%s, url:%s' % (section_name, url))
+                LOG.info(u"  已下载:%.2f%% 已下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
+        LOG.info(u'下载%s完成' % self.name)
         self.close()
 
     def close(self):
@@ -203,15 +243,42 @@ class downloader(object):
 
 def start():
     book_urls = find_new_storage_block()
-    for type, name, author, url in book_urls:
+    book_urls += find_recommend_block(u'强力推荐')
+    book_urls += find_type_block(u'玄幻小说')
+    book_urls += find_wanben()
+    new_updates = find_new_update_block()
+    book_num = len(book_urls) + len(new_updates)
+    for i, (type, name, author, url) in enumerate(book_urls):
         download_book(type, name, author, url)
+        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i+1, book_num - i -1)
+        time.sleep(30)
+
+    finished = len(book_urls)
+    for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
+        download_book(type, name, author, href)
+        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+        time.sleep(30)
+    LOG.info(u'下载完成')
     bf.tofile(open(bf_file, 'w'))
 
+
 if __name__ == '__main__':
-    # find_recommend_block('强力推荐')
-    # find_type_block('玄幻小说')
-    # book_urls = find_new_update_block()
     book_urls = find_new_storage_block()
-    for type, name, author, url in book_urls:
+    book_urls += find_recommend_block(u'强力推荐')
+    book_urls += find_type_block(u'玄幻小说')
+    book_urls += find_wanben()
+    new_updates = find_new_update_block()
+    book_num = len(book_urls) + len(new_updates)
+    for i, (type, name, author, url) in enumerate(book_urls):
         download_book(type, name, author, url)
+        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i + 1, book_num - i - 1)
+        time.sleep(30)
+
+    finished = len(book_urls)
+    for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
+        download_book(type, name, author, href)
+        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+        time.sleep(30)
+    LOG.info(u'下载完成')
     bf.tofile(open(bf_file, 'w'))
+

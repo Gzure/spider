@@ -1,0 +1,18 @@
+FROM python:2.7
+
+MAINTAINER ben.zuo "ben.zuo@pica8.com"
+
+# copy server
+RUN mkdir /work
+RUN mkdir /work/spider
+WORKDIR /work/spider
+COPY crawlers/ ./
+COPY static/ ./
+COPY requirements.txt .
+RUN touch spider.log
+COPY *.py ./
+RUN pip install -r requirements.txt
+EXPOSE 8888
+
+# run
+CMD ["/usr/bin/python","spider.py"]

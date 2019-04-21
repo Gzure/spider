@@ -5,12 +5,14 @@ from apscheduler.executors.pool import ThreadPoolExecutor
 from logging.handlers import RotatingFileHandler
 import logging
 import codecs
-from flask import request, Response
+from flask import request, Response, session, redirect
 from flask_apscheduler.json import jsonify
 from apscheduler.jobstores.base import ConflictingIdError, JobLookupError
 import os
+import commands
+from datetime import timedelta
 
-app = Flask('spider', static_path='', static_url_path=None,
+app = Flask('spider', static_url_path='',
             static_folder='static')
 scheduler = APScheduler()
 
@@ -18,9 +20,12 @@ DEBUG = 10
 INFO = 20
 
 
-LOG = app.logger
-app.static_folder = 'static'
+user = 'admin'
+password = 'admin'
 
+LOG = app.logger
+app.config['SECRET_KEY']= os.urandom(24)
+app.config['PERMANENT_SESSION_LIFETIME']=timedelta(days=1)
 
 # init log
 def init_log():
@@ -42,6 +47,24 @@ def init_secheduler():
     scheduler.start()
 
     # scheduler.add_job('crawl ikan', 'crawlers.ikantxt2:start', trigger='interval', seconds=8000)
+
+
+@app.before_request
+def login_filter():
+    path = str(request.path)
+    if path.startswith('/login') or path.startswith('/css') or path.startswith('/js') or path.startswith('/img'):
+        return
+    if 'username' in session:
+        return
+    return redirect('/login.html')
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    login_info = request.form
+    if login_info['name'] == user and login_info['password'] == 'admin':
+        session['username'] = login_info['name']
+        return redirect('/index.html')
 
 
 @app.route('/script/upload', methods=['POST'])
@@ -91,6 +114,13 @@ def add_task():
 
     task = request.form.copy().to_dict()
 
+    depends = task.get('depends', None)
+    if depends:
+        for depend in depends.split(','):
+            c_o = commands.getoutput('pip install %s' % depend)
+            LOG.info('c_o:%s', c_o)
+    del task['depends']
+
     trigger_value = task['trigger_value']
     trigger_dict = {}
     for entry in trigger_value.split(','):
@@ -106,7 +136,7 @@ def add_task():
             job = scheduler.get_job(task['id'])
         else:
             job = scheduler.add_job(**task)
-        return jsonify(job)
+        return redirect('/index.html')
     except ConflictingIdError:
         return jsonify(dict(error_message='Job %s already exists.' % task.get('id')), status=409)
     except Exception as e:
@@ -145,7 +175,7 @@ def update_task(name):
 if __name__ == '__main__':
     init_log()
     init_secheduler()
-    app.run('127.0.0.1', '8888')
+    app.run('0.0.0.0', 8888, debug=False)
 
 
 

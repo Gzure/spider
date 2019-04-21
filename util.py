@@ -27,3 +27,8 @@ def ref_to_obj(ref):
     except Exception:
         raise LookupError('Error resolving reference %s: error looking up object' % ref)
 
+
+if __name__ == '__main__':
+    import commands
+    text = commands.getoutput('ipconfig'.encode('gb2312'))
+    print text.decode('gb2312')
