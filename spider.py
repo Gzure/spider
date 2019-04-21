@@ -11,6 +11,10 @@ from apscheduler.jobstores.base import ConflictingIdError, JobLookupError
 import os
 import commands
 from datetime import timedelta
+from apscheduler.events import EVENT_ALL
+
+logging.basicConfig()
+logging.getLogger('apscheduler').setLevel(logging.DEBUG)
 
 app = Flask('spider', static_url_path='',
             static_folder='static')
@@ -45,6 +49,11 @@ def init_secheduler():
     app.config['SCHEDULER_EXECUTORS'] = {'default': ThreadPoolExecutor(2)}
     scheduler.init_app(app)
     scheduler.start()
+
+    def my_listener(event):
+        LOG.info('get scheduler event %s', event)
+
+    scheduler.add_listener(my_listener, EVENT_ALL)
 
     # scheduler.add_job('crawl ikan', 'crawlers.ikantxt2:start', trigger='interval', seconds=8000)
 
@@ -108,11 +117,12 @@ def add_task():
     :return:
     """
     script = request.files.get('script')
+    task = request.form.copy().to_dict()
     if script:
         path = 'crawlers/' + script.filename
         script.save(path)
-
-    task = request.form.copy().to_dict()
+    else:
+        del task['script']
 
     depends = task.get('depends', None)
     if depends:

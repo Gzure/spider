@@ -12,7 +12,10 @@ try:
     LOG = current_app.logger
 except:
     import logging
-    LOG = logging.getLogger(__name__)
+    from logging import handlers
+    logging.basicConfig()
+    logging.getLogger('apscheduler').setLevel(logging.DEBUG)
+    LOG = logging.getLogger('apscheduler')
 
 features = 'html.parser'
 
@@ -20,11 +23,11 @@ features = 'html.parser'
 url = 'https://www.biqukan.com'
 wan_ben_url = 'https://www.biqukan.com/wanben'
 bf_file = 'ikantxt2'
-# base_dir = u'/downloads/小说'
-base_dir = u'小说'
+base_dir = u'/downloads/小说'
+# base_dir = u'小说'
 content_f = re.compile(u'.*正文卷')
 
-req = requests.get(url = url)
+req = requests.get(url = url, timeout=10)
 html = req.text
 index = BeautifulSoup(html, features=features)
 
@@ -96,7 +99,7 @@ def find_type_block(name):
     top = container.find('div', class_='top').find('a')
     top_href = top.get('href')
     LOG.info(u'top:{} url:{}'.format(top.img.get('alt'), url + top_href))
-    book_urls.append(top_href)
+    book_urls.append((name, top.img.get('alt'), 'unknown', url + top_href))
     others = container.find_all('li')
     for other in others:
         a_ele = other.find('a')
@@ -201,7 +204,7 @@ class downloader(object):
     def get_contents(self, target):
         while True:
             try:
-                req = requests.get(url = target)
+                req = requests.get(url=target, timeout=10)
                 break
             except:
                 LOG.warn(target)
@@ -229,7 +232,10 @@ class downloader(object):
         for i, (section_name, url) in enumerate(self.urls):
             if not self.bfilter.add(url):
                 LOG.info('section_name:%s, url:%s' % (section_name, url))
-                self.writer(section_name, self.get_contents(url))
+                text = self.get_contents(url)
+                LOG.info('get text ok')
+                self.writer(section_name, text)
+                LOG.info('write text ok')
                 LOG.info(u"  已下载:%.2f%% 下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
             else:
                 LOG.info('section_name:%s, url:%s' % (section_name, url))
@@ -242,43 +248,52 @@ class downloader(object):
 
 
 def start():
-    book_urls = find_new_storage_block()
-    book_urls += find_recommend_block(u'强力推荐')
-    book_urls += find_type_block(u'玄幻小说')
-    book_urls += find_wanben()
-    new_updates = find_new_update_block()
-    book_num = len(book_urls) + len(new_updates)
-    for i, (type, name, author, url) in enumerate(book_urls):
-        download_book(type, name, author, url)
-        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i+1, book_num - i -1)
-        time.sleep(30)
+    try:
+        book_urls = find_new_storage_block()
+        book_urls += find_recommend_block(u'强力推荐')
+        book_urls += find_type_block(u'玄幻小说')
+        book_urls += find_wanben()
+        new_updates = find_new_update_block()
+        book_num = len(book_urls) + len(new_updates)
+        for i, (type, name, author, url) in enumerate(book_urls[:1]):
+            download_book(type, name, author, url)
+            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i+1, book_num - i -1)
+            time.sleep(30)
 
-    finished = len(book_urls)
-    for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
-        download_book(type, name, author, href)
-        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
-        time.sleep(30)
-    LOG.info(u'下载完成')
-    bf.tofile(open(bf_file, 'w'))
+        finished = len(book_urls)
+        for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
+            download_book(type, name, author, href)
+            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+            time.sleep(30)
+        LOG.info(u'下载完成')
+    except Exception as e:
+        LOG.exception(e)
+    finally:
+        bf.tofile(open(bf_file, 'w'))
 
 
 if __name__ == '__main__':
-    book_urls = find_new_storage_block()
-    book_urls += find_recommend_block(u'强力推荐')
-    book_urls += find_type_block(u'玄幻小说')
-    book_urls += find_wanben()
-    new_updates = find_new_update_block()
-    book_num = len(book_urls) + len(new_updates)
-    for i, (type, name, author, url) in enumerate(book_urls):
-        download_book(type, name, author, url)
-        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i + 1, book_num - i - 1)
-        time.sleep(30)
+    try:
+        book_urls = find_new_storage_block()
+        book_urls += find_recommend_block(u'强力推荐')
+        book_urls += find_type_block(u'玄幻小说')
+        raise Exception('hello')
+        new_updates = find_new_update_block()
+        book_num = len(book_urls) + len(new_updates)
+        for i, (type, name, author, url) in enumerate(book_urls):
+            download_book(type, name, author, url)
+            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i + 1, book_num - i - 1)
+            time.sleep(30)
 
-    finished = len(book_urls)
-    for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
-        download_book(type, name, author, href)
-        LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
-        time.sleep(30)
-    LOG.info(u'下载完成')
-    bf.tofile(open(bf_file, 'w'))
+        finished = len(book_urls)
+        for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
+            download_book(type, name, author, href)
+            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+            time.sleep(30)
+        LOG.info(u'下载完成')
+        bf.tofile(open(bf_file, 'w'))
+    except Exception as e:
+        LOG.exception(e)
+    finally:
+        bf.tofile(open(bf_file, 'w'))
 
