@@ -152,3 +152,745 @@ KeyError: 'script'
 2019-04-21 08:16:49,319 INFO ikantxt2[line:117] 类型:[修真小说] 名称:北刀捭阖录 链接:https://www.biqukan.com/61_61801/ 作者:我会龙卷雨击 章节:第五十二章 领悟 章节链接:https://www.biqukan.com/61_61801/472691637.html
 2019-04-21 08:16:49,319 INFO ikantxt2[line:117] 类型:[其他小说] 名称:炮龙烹凤 链接:https://www.biqukan.com/62_62042/ 作者:闲看浮云庭花 章节:第一百一十章 又遇山贼 章节链接:https://www.biqukan.com/62_62042/38266863.html
 2019-04-21 08:16:49,319 INFO ikantxt2[line:117] 类型:[其他小说] 名称:废材少女位面求生记 链接:https://www.biqukan.com/61_61219/ 作者:浮浪蕊 章节:第一百九十三章 浓雾里有怪兽 章节链接:https://www.biqukan.com/61_61219/473599157.html
+2019-04-22 17:09:55,002 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/pica8/spider/spider.py", line 141, in add_task
+    del task['script']
+KeyError: 'script'
+2019-04-22 17:10:24,838 ERROR app[line:1560] Exception on /task/add [POST]
+Traceback (most recent call last):
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:/pica8/pica8/spider/spider.py", line 141, in add_task
+    del task['script']
+KeyError: 'script'
+2019-04-22 17:21:42,426 INFO ikantxt2[line:38] init bs
+2019-04-22 17:21:42,463 INFO spider[line:57] get scheduler event <JobEvent (code=512)>
+2019-04-22 18:11:38,056 INFO ikantxt2[line:38] init bs
+2019-04-22 18:11:38,059 INFO spider[line:57] get scheduler event <JobEvent (code=512)>
+2019-04-22 18:12:39,321 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:17:47,680 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:22:58,950 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:24:12,855 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:24:23,798 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:24:29,071 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:24:32,349 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:24:52,390 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:30,894 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:37,869 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:41,549 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:43,983 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:47,055 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:25:56,782 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:04,237 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:06,765 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:09,141 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:15,368 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:18,293 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:22,948 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:26:26,197 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:27:01,591 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:27:17,605 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:27:20,726 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:28:28,884 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:29:51,131 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:29:55,653 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:01,947 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:05,372 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:07,803 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:09,884 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:12,131 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:14,276 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:16,188 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:25,173 INFO spider[line:57] get scheduler event <JobEvent (code=1024)>
+2019-04-22 18:30:50,039 INFO spider[line:57] get scheduler event <JobEvent (code=512)>
+2019-04-22 18:30:55,964 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:30:58,516 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:31:00,516 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:31:02,436 INFO spider[line:57] get scheduler event <JobEvent (code=2048)>
+2019-04-22 18:31:06,796 INFO spider[line:57] get scheduler event <JobEvent (code=1024)>
+2019-04-22 18:31:32,045 INFO spider[line:57] get scheduler event <JobEvent (code=512)>
+2019-04-22 18:33:26,336 INFO ikantxt2[line:139] 类型:[科幻] 名称:超级时刻 链接:https://www.biqukan.com/64_64465/ 作者:unknown
+2019-04-22 18:33:26,338 INFO ikantxt2[line:139] 类型:[玄幻] 名称:在斗罗大陆开始的穿越日常 链接:https://www.biqukan.com/64_64464/ 作者:unknown
+2019-04-22 18:33:26,339 INFO ikantxt2[line:139] 类型:[穿越] 名称:真假世子妃 链接:https://www.biqukan.com/64_64463/ 作者:unknown
+2019-04-22 18:33:26,341 INFO ikantxt2[line:139] 类型:[修真] 名称:天地之七绝 链接:https://www.biqukan.com/64_64462/ 作者:unknown
+2019-04-22 18:33:26,342 INFO ikantxt2[line:139] 类型:[都市] 名称:星辰本是一对 链接:https://www.biqukan.com/64_64461/ 作者:unknown
+2019-04-22 18:33:26,342 INFO ikantxt2[line:139] 类型:[穿越] 名称:流离间见琉璃 链接:https://www.biqukan.com/64_64460/ 作者:unknown
+2019-04-22 18:33:26,342 INFO ikantxt2[line:139] 类型:[修真] 名称:剑颂 链接:https://www.biqukan.com/64_64459/ 作者:unknown
+2019-04-22 18:33:26,342 INFO ikantxt2[line:139] 类型:[其他] 名称:纭深不知璟 链接:https://www.biqukan.com/64_64458/ 作者:unknown
+2019-04-22 18:33:26,342 INFO ikantxt2[line:139] 类型:[其他] 名称:余生，不弃 链接:https://www.biqukan.com/64_64457/ 作者:unknown
+2019-04-22 18:33:26,344 INFO ikantxt2[line:139] 类型:[其他] 名称:狐世说 链接:https://www.biqukan.com/64_64456/ 作者:unknown
+2019-04-22 18:33:26,344 INFO ikantxt2[line:139] 类型:[其他] 名称:余生，定不负卿 链接:https://www.biqukan.com/64_64455/ 作者:unknown
+2019-04-22 18:33:26,345 INFO ikantxt2[line:139] 类型:[穿越] 名称:御权策：陛下风华绝代 链接:https://www.biqukan.com/64_64454/ 作者:unknown
+2019-04-22 18:33:26,345 INFO ikantxt2[line:139] 类型:[修真] 名称:千万妖魔听我使唤 链接:https://www.biqukan.com/64_64453/ 作者:unknown
+2019-04-22 18:33:26,348 INFO ikantxt2[line:139] 类型:[都市] 名称:病态宠爱：甜妻，休想逃 链接:https://www.biqukan.com/64_64452/ 作者:unknown
+2019-04-22 18:33:26,349 INFO ikantxt2[line:139] 类型:[网游] 名称:称号之下 链接:https://www.biqukan.com/64_64451/ 作者:unknown
+2019-04-22 18:33:26,349 INFO ikantxt2[line:139] 类型:[穿越] 名称:明月炉 链接:https://www.biqukan.com/64_64450/ 作者:unknown
+2019-04-22 18:33:26,351 INFO ikantxt2[line:139] 类型:[其他] 名称:妙女多娇 链接:https://www.biqukan.com/64_64449/ 作者:unknown
+2019-04-22 18:33:26,351 INFO ikantxt2[line:139] 类型:[科幻] 名称:万界第一猛士 链接:https://www.biqukan.com/64_64448/ 作者:unknown
+2019-04-22 18:33:26,351 INFO ikantxt2[line:139] 类型:[科幻] 名称:从铠甲开始变强 链接:https://www.biqukan.com/64_64447/ 作者:unknown
+2019-04-22 18:33:26,351 INFO ikantxt2[line:139] 类型:[其他] 名称:月光倾城不及你 链接:https://www.biqukan.com/64_64446/ 作者:unknown
+2019-04-22 18:33:26,354 INFO ikantxt2[line:139] 类型:[其他] 名称:阎王，好久不见 链接:https://www.biqukan.com/64_64445/ 作者:unknown
+2019-04-22 18:33:26,355 INFO ikantxt2[line:139] 类型:[其他] 名称:盾之勇者世界的御主 链接:https://www.biqukan.com/64_64444/ 作者:unknown
+2019-04-22 18:33:26,355 INFO ikantxt2[line:139] 类型:[其他] 名称:小曦逆流而上！ 链接:https://www.biqukan.com/64_64443/ 作者:unknown
+2019-04-22 18:33:26,357 INFO ikantxt2[line:139] 类型:[都市] 名称:灵气复苏之回收系统 链接:https://www.biqukan.com/64_64442/ 作者:unknown
+2019-04-22 18:33:26,358 INFO ikantxt2[line:139] 类型:[科幻] 名称:炮灰攻略：最强筑梦师 链接:https://www.biqukan.com/64_64441/ 作者:unknown
+2019-04-22 18:33:26,358 INFO ikantxt2[line:139] 类型:[科幻] 名称:叛逆行者 链接:https://www.biqukan.com/64_64440/ 作者:unknown
+2019-04-22 18:33:26,358 INFO ikantxt2[line:139] 类型:[都市] 名称:隐婚密爱：傅少求放过 链接:https://www.biqukan.com/64_64439/ 作者:unknown
+2019-04-22 18:33:26,358 INFO ikantxt2[line:139] 类型:[穿越] 名称:一妃难求：冷傲帝王不经撩 链接:https://www.biqukan.com/64_64438/ 作者:unknown
+2019-04-22 18:33:26,358 INFO ikantxt2[line:139] 类型:[玄幻] 名称:仙迹天下 链接:https://www.biqukan.com/64_64437/ 作者:unknown
+2019-04-22 18:33:26,359 INFO ikantxt2[line:139] 类型:[穿越] 名称:黯淡的中世纪 链接:https://www.biqukan.com/64_64436/ 作者:unknown
+2019-04-22 18:33:26,362 INFO ikantxt2[line:89] 类型:[修真] 名称:滇娇传之天悦东方 链接:https://www.biqukan.com/0_784/ 作者:耳根
+2019-04-22 18:33:26,362 INFO ikantxt2[line:89] 类型:[玄幻] 名称:圣墟 链接:https://www.biqukan.com/0_178/ 作者:辰东
+2019-04-22 18:33:26,364 INFO ikantxt2[line:89] 类型:[其他] 名称:天道图书馆 链接:https://www.biqukan.com/17_17957/ 作者:横扫天涯
+2019-04-22 18:33:26,364 INFO ikantxt2[line:89] 类型:[玄幻] 名称:武道宗师 链接:https://www.biqukan.com/1_1452/ 作者:爱潜水的乌贼
+2019-04-22 18:33:26,365 INFO ikantxt2[line:89] 类型:[玄幻] 名称:龙王传说 链接:https://www.biqukan.com/1_1496/ 作者:唐家三少
+2019-04-22 18:33:26,365 INFO ikantxt2[line:89] 类型:[修真] 名称:凡人修仙之仙界篇 链接:https://www.biqukan.com/0_319/ 作者:忘语
+2019-04-22 18:33:26,365 INFO ikantxt2[line:89] 类型:[修真] 名称:六迹之梦魇宫 链接:https://www.biqukan.com/1_1020/ 作者:忘语
+2019-04-22 18:33:26,367 INFO ikantxt2[line:89] 类型:[玄幻] 名称:牧神记 链接:https://www.biqukan.com/17_17225/ 作者:宅猪
+2019-04-22 18:33:26,367 INFO ikantxt2[line:89] 类型:[修真] 名称:三寸人间 链接:https://www.biqukan.com/0_159/ 作者:耳根
+2019-04-22 18:33:26,372 INFO ikantxt2[line:101] top:三界独尊 url:https://www.biqukan.com/0_973/
+2019-04-22 18:33:26,374 INFO ikantxt2[line:109] 类型:玄幻小说 名称:校园修真高手 链接:https://www.biqukan.com/31_31729/ 作者:木榆
+2019-04-22 18:33:26,374 INFO ikantxt2[line:109] 类型:玄幻小说 名称:雄霸神荒 链接:https://www.biqukan.com/12_12303/ 作者:刀落
+2019-04-22 18:33:26,374 INFO ikantxt2[line:109] 类型:玄幻小说 名称:独步天途 链接:https://www.biqukan.com/20_20951/ 作者:玄雨
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:青云直上 链接:https://www.biqukan.com/30_30398/ 作者:鹅城知县
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:柯南世界里的巫师 链接:https://www.biqukan.com/17_17065/ 作者:追梦人Love平
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:绝对选项 链接:https://www.biqukan.com/20_20518/ 作者:梨落秋溪
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:食戟之冒牌小当家 链接:https://www.biqukan.com/26_26156/ 作者:绅士东
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:剑与魔法与出租车 链接:https://www.biqukan.com/19_19671/ 作者:索斯
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:三界狂徒 链接:https://www.biqukan.com/24_24125/ 作者:单水水
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:青莲剑说 链接:https://www.biqukan.com/20_20795/ 作者:华表
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:万法梵医 链接:https://www.biqukan.com/21_21493/ 作者:相思洗红豆
+2019-04-22 18:33:26,375 INFO ikantxt2[line:109] 类型:玄幻小说 名称:顾盼成欢 链接:https://www.biqukan.com/24_24528/ 作者:莞迩
+2019-04-22 18:33:26,381 INFO ikantxt2[line:101] top:地球唯一修士 url:https://www.biqukan.com/18_18805/
+2019-04-22 18:33:26,381 INFO ikantxt2[line:109] 类型:修真小说 名称:无相仙诀 链接:https://www.biqukan.com/24_24209/ 作者:齐氏小白
+2019-04-22 18:33:26,382 INFO ikantxt2[line:109] 类型:修真小说 名称:唯仙独行 链接:https://www.biqukan.com/13_13559/ 作者:余鹤南枝
+2019-04-22 18:33:26,382 INFO ikantxt2[line:109] 类型:修真小说 名称:武侠世界自由行 链接:https://www.biqukan.com/12_12542/ 作者:大江入海
+2019-04-22 18:33:26,382 INFO ikantxt2[line:109] 类型:修真小说 名称:太易 链接:https://www.biqukan.com/11_11056/ 作者:无极书虫
+2019-04-22 18:33:26,382 INFO ikantxt2[line:109] 类型:修真小说 名称:阴阳道典 链接:https://www.biqukan.com/24_24586/ 作者:胖亦有道
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:修真门派掌门路 链接:https://www.biqukan.com/9_9145/ 作者:齐可休
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:三界仙缘 链接:https://www.biqukan.com/16_16418/ 作者:东山火
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:大神皇 链接:https://www.biqukan.com/15_15923/ 作者:水冷酒家
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:仙道横行 链接:https://www.biqukan.com/24_24194/ 作者:小无相公
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:无界仙皇 链接:https://www.biqukan.com/18_18220/ 作者:石三
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:寻师有计出师表 链接:https://www.biqukan.com/17_17851/ 作者:执剑问情
+2019-04-22 18:33:26,384 INFO ikantxt2[line:109] 类型:修真小说 名称:刀剑聊斋 链接:https://www.biqukan.com/16_16310/ 作者:南宫吟
+2019-04-22 18:33:26,394 INFO ikantxt2[line:101] top:校花之贴身高手 url:https://www.biqukan.com/11_11499/
+2019-04-22 18:33:26,394 INFO ikantxt2[line:109] 类型:都市小说 名称:都市最强特种兵 链接:https://www.biqukan.com/40_40461/ 作者:尼姑庵的和尚
+2019-04-22 18:33:26,394 INFO ikantxt2[line:109] 类型:都市小说 名称:妖孽兵王 链接:https://www.biqukan.com/2_2443/ 作者:妙手摘星
+2019-04-22 18:33:26,394 INFO ikantxt2[line:109] 类型:都市小说 名称:贼警 链接:https://www.biqukan.com/20_20960/ 作者:虾写
+2019-04-22 18:33:26,394 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之悠闲 链接:https://www.biqukan.com/1_1359/ 作者:呆萌的瑜
+2019-04-22 18:33:26,395 INFO ikantxt2[line:109] 类型:都市小说 名称:纯禽记者 链接:https://www.biqukan.com/11_11994/ 作者:高冷的沐小婧
+2019-04-22 18:33:26,395 INFO ikantxt2[line:109] 类型:都市小说 名称:逍遥小镇长 链接:https://www.biqukan.com/1_1097/ 作者:全金属弹壳
+2019-04-22 18:33:26,395 INFO ikantxt2[line:109] 类型:都市小说 名称:韩娱之光影交错 链接:https://www.biqukan.com/0_62/ 作者:姬叉
+2019-04-22 18:33:26,395 INFO ikantxt2[line:109] 类型:都市小说 名称:终末之城 链接:https://www.biqukan.com/18_18420/ 作者:西贝猫
+2019-04-22 18:33:26,397 INFO ikantxt2[line:109] 类型:都市小说 名称:宁小闲御神录 链接:https://www.biqukan.com/1_1432/ 作者:风行水云间
+2019-04-22 18:33:26,397 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之妙手狂医 链接:https://www.biqukan.com/24_24527/ 作者:最帅的帅白
+2019-04-22 18:33:26,397 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之抠脚大汉变男神 链接:https://www.biqukan.com/16_16958/ 作者:二宝天使
+2019-04-22 18:33:26,397 INFO ikantxt2[line:109] 类型:都市小说 名称:女神的近身护卫 链接:https://www.biqukan.com/0_20/ 作者:肥茄子
+2019-04-22 18:33:26,404 INFO ikantxt2[line:101] top:孺子帝 url:https://www.biqukan.com/1_1267/
+2019-04-22 18:33:26,405 INFO ikantxt2[line:109] 类型:穿越小说 名称:猎杀全球 链接:https://www.biqukan.com/20_20962/ 作者:白色米饭
+2019-04-22 18:33:26,405 INFO ikantxt2[line:109] 类型:穿越小说 名称:红色脊梁 链接:https://www.biqukan.com/19_19928/ 作者:巨火
+2019-04-22 18:33:26,405 INFO ikantxt2[line:109] 类型:穿越小说 名称:我的老婆是土匪 链接:https://www.biqukan.com/11_11408/ 作者:千斤顶
+2019-04-22 18:33:26,405 INFO ikantxt2[line:109] 类型:穿越小说 名称:大国医 链接:https://www.biqukan.com/16_16083/ 作者:美味罗宋汤
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:护花大国士 链接:https://www.biqukan.com/20_20479/ 作者:庄不周
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:超级响马系统 链接:https://www.biqukan.com/20_20989/ 作者:解甲归田
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:我在三国打直播 链接:https://www.biqukan.com/19_19271/ 作者:白皮小火车
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:三国之无限召唤 链接:https://www.biqukan.com/1_1736/ 作者:堂燕归来
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:大明才子风云录 链接:https://www.biqukan.com/15_15927/ 作者:尚南山
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:断狱 链接:https://www.biqukan.com/24_24088/ 作者:离人望左岸
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:抗战之无双战将 链接:https://www.biqukan.com/10_10245/ 作者:步枪打蚊子
+2019-04-22 18:33:26,407 INFO ikantxt2[line:109] 类型:穿越小说 名称:大明闲人 链接:https://www.biqukan.com/16_16416/ 作者:大篷车
+2019-04-22 18:33:26,417 INFO ikantxt2[line:101] top:网游之大盗贼 url:https://www.biqukan.com/11_11345/
+2019-04-22 18:33:26,417 INFO ikantxt2[line:109] 类型:网游小说 名称:剑娘 链接:https://www.biqukan.com/10_10361/ 作者:沧澜波涛短
+2019-04-22 18:33:26,417 INFO ikantxt2[line:109] 类型:网游小说 名称:全职BOSS 链接:https://www.biqukan.com/10_10242/ 作者:宝月流光
+2019-04-22 18:33:26,417 INFO ikantxt2[line:109] 类型:网游小说 名称:俺是一个贼 链接:https://www.biqukan.com/16_16126/ 作者:关嘲
+2019-04-22 18:33:26,417 INFO ikantxt2[line:109] 类型:网游小说 名称:战神领主 链接:https://www.biqukan.com/4_4146/ 作者:木牛流猫
+2019-04-22 18:33:26,418 INFO ikantxt2[line:109] 类型:网游小说 名称:琥珀之剑 链接:https://www.biqukan.com/3_3742/ 作者:绯炎
+2019-04-22 18:33:26,418 INFO ikantxt2[line:109] 类型:网游小说 名称:英雄联盟之荣耀崛起 链接:https://www.biqukan.com/16_16013/ 作者:东城十四少
+2019-04-22 18:33:26,418 INFO ikantxt2[line:109] 类型:网游小说 名称:战破苍穹 链接:https://www.biqukan.com/25_25977/ 作者:龙大人
+2019-04-22 18:33:26,420 INFO ikantxt2[line:109] 类型:网游小说 名称:重生之轮回修罗 链接:https://www.biqukan.com/15_15968/ 作者:拉风的小狐狸
+2019-04-22 18:33:26,421 INFO ikantxt2[line:109] 类型:网游小说 名称:末世图腾 链接:https://www.biqukan.com/16_16244/ 作者:辉煌战狼
+2019-04-22 18:33:26,421 INFO ikantxt2[line:109] 类型:网游小说 名称:圣魔猎手 链接:https://www.biqukan.com/11_11403/ 作者:核动力重坦
+2019-04-22 18:33:26,421 INFO ikantxt2[line:109] 类型:网游小说 名称:武侠世界里的超级玩家 链接:https://www.biqukan.com/16_16594/ 作者:想枕头的瞌睡
+2019-04-22 18:33:26,421 INFO ikantxt2[line:109] 类型:网游小说 名称:网游之法师的逆袭 链接:https://www.biqukan.com/16_16114/ 作者:开车的时候嚼炫迈
+2019-04-22 18:33:26,430 INFO ikantxt2[line:101] top:网游之巅峰召唤 url:https://www.biqukan.com/34_34587/
+2019-04-22 18:33:26,431 INFO ikantxt2[line:109] 类型:科幻小说 名称:未来游乐场 链接:https://www.biqukan.com/21_21598/ 作者:奥比椰
+2019-04-22 18:33:26,431 INFO ikantxt2[line:109] 类型:科幻小说 名称:帝临武侠 链接:https://www.biqukan.com/15_15726/ 作者:隔壁老王01
+2019-04-22 18:33:26,431 INFO ikantxt2[line:109] 类型:科幻小说 名称:铁掌无敌王小军 链接:https://www.biqukan.com/1_1438/ 作者:张小花
+2019-04-22 18:33:26,431 INFO ikantxt2[line:109] 类型:科幻小说 名称:未来之军娘在上 链接:https://www.biqukan.com/0_744/ 作者:油爆香菇
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:核血机心 链接:https://www.biqukan.com/21_21117/ 作者:愤怒的星期天
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:进化狂潮 链接:https://www.biqukan.com/16_16286/ 作者:兔子专吃窝边草
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:美漫之血清 链接:https://www.biqukan.com/23_23166/ 作者:龙王的后代
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:二次元王座 链接:https://www.biqukan.com/20_20604/ 作者:二次元白菜
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:美漫之大冬兵 链接:https://www.biqukan.com/22_22960/ 作者:育
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:末世危城 链接:https://www.biqukan.com/16_16303/ 作者:熊猫快跑
+2019-04-22 18:33:26,434 INFO ikantxt2[line:109] 类型:科幻小说 名称:带口铁锅闯末世 链接:https://www.biqukan.com/24_24994/ 作者:笑死鸟
+2019-04-22 18:33:26,437 INFO ikantxt2[line:109] 类型:科幻小说 名称:末世之红警崛起 链接:https://www.biqukan.com/19_19601/ 作者:为情成痴
+2019-04-22 18:33:27,394 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:恐怖机场 链接:https://www.biqukan.com/57_57530/ 作者:北极猎手
+2019-04-22 18:33:27,395 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:焦土黎明 链接:https://www.biqukan.com/57_57632/ 作者:狼家二萌神
+2019-04-22 18:33:27,395 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:凌霄之上 链接:https://www.biqukan.com/39_39496/ 作者:观棋
+2019-04-22 18:33:27,397 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:重生之低调大亨 链接:https://www.biqukan.com/57_57514/ 作者:易水寒春秋
+2019-04-22 18:33:27,397 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:带着地球去封神 链接:https://www.biqukan.com/57_57222/ 作者:笙箫剑客
+2019-04-22 18:33:27,398 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:一剑独尊 链接:https://www.biqukan.com/57_57527/ 作者:青鸾峰上
+2019-04-22 18:33:27,398 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:重生之游戏大亨 链接:https://www.biqukan.com/57_57540/ 作者:成刚
+2019-04-22 18:33:27,398 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:小人物的非凡之路 链接:https://www.biqukan.com/57_57535/ 作者:创里有作
+2019-04-22 18:33:27,400 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:我在北美当律师 链接:https://www.biqukan.com/57_57227/ 作者:春夏秋冬眠
+2019-04-22 18:33:27,401 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:明末求生记 链接:https://www.biqukan.com/57_57536/ 作者:名剑山庄
+2019-04-22 18:33:27,401 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:战天武录 链接:https://www.biqukan.com/57_57547/ 作者:红酒加可乐1
+2019-04-22 18:33:27,403 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:盖帽高手 链接:https://www.biqukan.com/57_57168/ 作者:站立的西瓜
+2019-04-22 18:33:27,404 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:武道地球 链接:https://www.biqukan.com/57_57188/ 作者:疯子话
+2019-04-22 18:33:27,404 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:万界合流 链接:https://www.biqukan.com/57_57573/ 作者:心冰
+2019-04-22 18:33:27,404 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:破碎命盘 链接:https://www.biqukan.com/57_57539/ 作者:孙悟远
+2019-04-22 18:33:27,405 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:大宋奸臣 链接:https://www.biqukan.com/57_57615/ 作者:乃去
+2019-04-22 18:33:27,407 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:玲珑江湖 链接:https://www.biqukan.com/57_57526/ 作者:建安瘦
+2019-04-22 18:33:27,407 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:道神 链接:https://www.biqukan.com/2_2644/ 作者:凌乱的小道
+2019-04-22 18:33:27,407 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:传奇族长 链接:https://www.biqukan.com/2_2028/ 作者:山人有妙计
+2019-04-22 18:33:27,407 INFO ikantxt2[line:62] 类型:[其他小说](完本) 名称:火影之医者日记 链接:https://www.biqukan.com/57_57205/ 作者:吾名午夜
+2019-04-22 18:33:27,408 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:绝世皇帝 链接:https://www.biqukan.com/30_30243/ 作者:盛夏微暗
+2019-04-22 18:33:27,410 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:废土崛起 链接:https://www.biqukan.com/16_16636/ 作者:通吃道人.QD
+2019-04-22 18:33:27,410 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:鬼咒 链接:https://www.biqukan.com/16_16069/ 作者:念响
+2019-04-22 18:33:27,411 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:能穿越美漫的大奥术师 链接:https://www.biqukan.com/57_57173/ 作者:文艺官
+2019-04-22 18:33:27,411 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:都市巅峰强少 链接:https://www.biqukan.com/15_15896/ 作者:浪冰心火
+2019-04-22 18:33:27,411 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:乱明 链接:https://www.biqukan.com/26_26124/ 作者:喻心
+2019-04-22 18:33:27,413 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:网游之厄运先生 链接:https://www.biqukan.com/34_34008/ 作者:二亩田
+2019-04-22 18:33:27,414 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:巫颂 链接:https://www.biqukan.com/27_27875/ 作者:血红
+2019-04-22 18:33:27,414 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:西游之龙道至尊 链接:https://www.biqukan.com/43_43744/ 作者:风雪寒漠
+2019-04-22 18:33:27,414 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:邂逅神秘BOSS 链接:https://www.biqukan.com/15_15959/ 作者:纳兰海映
+2019-04-22 18:33:27,418 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:钻石王牌之最强打者 链接:https://www.biqukan.com/22_22978/ 作者:unknown
+2019-04-22 18:33:27,418 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:虫噬星空 链接:https://www.biqukan.com/19_19438/ 作者:unknown
+2019-04-22 18:33:27,420 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:最强神豪奶爸 链接:https://www.biqukan.com/51_51423/ 作者:unknown
+2019-04-22 18:33:27,420 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:调教大宋 链接:https://www.biqukan.com/20_20289/ 作者:unknown
+2019-04-22 18:33:27,421 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:极品富二代 链接:https://www.biqukan.com/0_10/ 作者:unknown
+2019-04-22 18:33:27,421 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:弑天刃 链接:https://www.biqukan.com/0_523/ 作者:unknown
+2019-04-22 18:33:27,433 INFO ikantxt2[line:125] 类型:[都市小说] 名称:都市无敌医圣 链接:https://www.biqukan.com/43_43101/ 作者:可爱冬瓜 章节:第889章 图穷匕见 章节链接:https://www.biqukan.com/43_43101/23442630.html
+2019-04-22 18:33:27,433 INFO ikantxt2[line:125] 类型:[都市小说] 名称:重生七零小媳妇 链接:https://www.biqukan.com/64_64011/ 作者:潇湘宝宝 章节:513.汤太太（二更） 章节链接:https://www.biqukan.com/64_64011/41947008.html
+2019-04-22 18:33:27,434 INFO ikantxt2[line:125] 类型:[都市小说] 名称:地府淘宝商 链接:https://www.biqukan.com/24_24323/ 作者:浓睡 章节:第七百五十二章：约定 章节链接:https://www.biqukan.com/24_24323/23441615.html
+2019-04-22 18:33:27,434 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:修罗天帝 链接:https://www.biqukan.com/20_20747/ 作者:实验小白鼠 章节:第3224章 第二道杀招 章节链接:https://www.biqukan.com/20_20747/23489481.html
+2019-04-22 18:33:27,434 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:推掉那座塔 链接:https://www.biqukan.com/59_59287/ 作者:冲锋火焰猪 章节:第349章 连升两级、六刻倒吊人 章节链接:https://www.biqukan.com/59_59287/472227497.html
+2019-04-22 18:33:27,436 INFO ikantxt2[line:125] 类型:[其他小说] 名称:八十年代的小媳妇 链接:https://www.biqukan.com/63_63544/ 作者:樱椤 章节:第一百一十二章 最后的决定 章节链接:https://www.biqukan.com/63_63544/38388907.html
+2019-04-22 18:33:27,436 INFO ikantxt2[line:125] 类型:[其他小说] 名称:总裁爹地宠上天 链接:https://www.biqukan.com/63_63214/ 作者:柠檬呀 章节:第二百四十章 骗了你 章节链接:https://www.biqukan.com/63_63214/38264995.html
+2019-04-22 18:33:27,437 INFO ikantxt2[line:125] 类型:[都市小说] 名称:娱乐超级奶爸 链接:https://www.biqukan.com/63_63306/ 作者:洛山山 章节:第七百五十四章 两个电视台的明争暗斗 章节链接:https://www.biqukan.com/63_63306/38257315.html
+2019-04-22 18:33:27,437 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:掌合乾坤 链接:https://www.biqukan.com/62_62282/ 作者:盟主天下 章节:第二百八十六章 一万年的悲剧 章节链接:https://www.biqukan.com/62_62282/38269458.html
+2019-04-22 18:33:27,437 INFO ikantxt2[line:125] 类型:[其他小说] 名称:灵天幻梦 链接:https://www.biqukan.com/62_62788/ 作者:青檐阁主 章节:第一百三十五章 尾（二） 章节链接:https://www.biqukan.com/62_62788/38248337.html
+2019-04-22 18:33:27,438 INFO ikantxt2[line:125] 类型:[科幻小说] 名称:光明行者 链接:https://www.biqukan.com/62_62036/ 作者:万木春 章节:第082 谎言中寻找真相 章节链接:https://www.biqukan.com/62_62036/472232232.html
+2019-04-22 18:33:27,438 INFO ikantxt2[line:125] 类型:[其他小说] 名称:妹子请自重 链接:https://www.biqukan.com/61_61803/ 作者:声起于形 章节:第一百二十九章 不可能不可能 章节链接:https://www.biqukan.com/61_61803/476533771.html
+2019-04-22 18:33:27,440 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:躺着就变强了 链接:https://www.biqukan.com/61_61466/ 作者:熊狼狗 章节:208 艾莎 章节链接:https://www.biqukan.com/61_61466/472252769.html
+2019-04-22 18:33:27,440 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:万古武帝 链接:https://www.biqukan.com/63_63577/ 作者:愁入西风 章节:第407章 阴阳 章节链接:https://www.biqukan.com/63_63577/38244345.html
+2019-04-22 18:33:27,440 INFO ikantxt2[line:125] 类型:[其他小说] 名称:超越次元的事务所 链接:https://www.biqukan.com/60_60061/ 作者:第三魔法使 章节:第一百一十四章 气化冷冻法？好像也不怎么冷嘛 章节链接:https://www.biqukan.com/60_60061/472274830.html
+2019-04-22 18:33:27,441 INFO ikantxt2[line:125] 类型:[都市小说] 名称:镇天棺 链接:https://www.biqukan.com/58_58548/ 作者:小三胖子 章节:第四百九十三章虎头蛇尾 章节链接:https://www.biqukan.com/58_58548/38256965.html
+2019-04-22 18:33:27,441 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:绝天神帝 链接:https://www.biqukan.com/58_58061/ 作者:香辣卷筒粉 章节:第四百六十章 围攻：围攻！ 章节链接:https://www.biqukan.com/58_58061/38247428.html
+2019-04-22 18:33:27,443 INFO ikantxt2[line:125] 类型:[网游小说] 名称:王牌少帅 链接:https://www.biqukan.com/57_57484/ 作者:流金岁阅 章节:第四百九十五章 连胜进行时（下） 章节链接:https://www.biqukan.com/57_57484/439516524.html
+2019-04-22 18:33:27,443 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:宗主人呢 链接:https://www.biqukan.com/56_56442/ 作者:牧古辰钟 章节:209.我爹爹去哪了？ 章节链接:https://www.biqukan.com/56_56442/472272912.html
+2019-04-22 18:33:27,444 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:无量劫主 链接:https://www.biqukan.com/57_57812/ 作者:手太阴肺经 章节:第五百零六章 俗事烦扰 章节链接:https://www.biqukan.com/57_57812/38260606.html
+2019-04-22 18:33:27,444 INFO ikantxt2[line:125] 类型:[其他小说] 名称:斗破苍穹神之炎帝 链接:https://www.biqukan.com/51_51638/ 作者:柠檬邱霞 章节:第一千二百二十一章 一目之力！（第四更） 章节链接:https://www.biqukan.com/51_51638/472329894.html
+2019-04-22 18:33:27,444 INFO ikantxt2[line:125] 类型:[修真小说] 名称:神道复苏 链接:https://www.biqukan.com/59_59519/ 作者:神秘道人 章节:第二百九十章 黑龙大运 章节链接:https://www.biqukan.com/59_59519/472227543.html
+2019-04-22 18:33:27,446 INFO ikantxt2[line:125] 类型:[穿越小说] 名称:尊主嫁到之赖上俏医妃 链接:https://www.biqukan.com/64_64243/ 作者:墨雪千城 章节:52小尾巴（ＰＫ二更求收） 章节链接:https://www.biqukan.com/64_64243/41947020.html
+2019-04-22 18:33:27,447 INFO ikantxt2[line:125] 类型:[其他小说] 名称:难负深盟 链接:https://www.biqukan.com/60_60721/ 作者:明岚紫烟 章节:第一百零二章 疑虑 章节链接:https://www.biqukan.com/60_60721/472227573.html
+2019-04-22 18:33:27,447 INFO ikantxt2[line:125] 类型:[其他小说] 名称:我的漫画家攻略 链接:https://www.biqukan.com/56_56873/ 作者:潇潇羽下 章节:第787章 创作name 章节链接:https://www.biqukan.com/56_56873/472227594.html
+2019-04-22 18:33:27,447 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:角临 链接:https://www.biqukan.com/63_63025/ 作者:入玄里 章节:100 重新掌握（谢谢‘大猪蹄子_嘻嘻’的打赏） 章节链接:https://www.biqukan.com/63_63025/472227635.html
+2019-04-22 18:33:27,448 INFO ikantxt2[line:125] 类型:[网游小说] 名称:网游之绝学 链接:https://www.biqukan.com/16_16319/ 作者:依郁 章节:第七百九十一章 破鞭式 章节链接:https://www.biqukan.com/16_16319/22784108.html
+2019-04-22 18:33:27,448 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:天眼炼魂 链接:https://www.biqukan.com/42_42996/ 作者:夜阳斋 章节:第970章 蜃水天兵 章节链接:https://www.biqukan.com/42_42996/70916326.html
+2019-04-22 18:33:27,450 INFO ikantxt2[line:125] 类型:[都市小说] 名称:超级制造商 链接:https://www.biqukan.com/38_38552/ 作者:傻小四 章节:第一千五百零九章 芙灵的打算 章节链接:https://www.biqukan.com/38_38552/23483325.html
+2019-04-22 18:33:27,450 INFO ikantxt2[line:125] 类型:[科幻小说] 名称:劫天运 链接:https://www.biqukan.com/11_11952/ 作者:浮梦流年 章节:第四千七百三十一章：格杀 章节链接:https://www.biqukan.com/11_11952/23487660.html
+2019-04-22 18:33:27,451 INFO ikantxt2[line:191] download 超级时刻 to /downloads/小说/[科幻]/unknown/超级时刻.txt
+2019-04-22 18:33:28,413 INFO ikantxt2[line:230] 开始下载超级时刻:
+2019-04-22 18:33:28,426 INFO ikantxt2[line:234] section_name:[1.我死了], url:[https://www.biqukan.com/64_64465/473133300.html]
+2019-04-22 18:33:29,227 INFO ikantxt2[line:237]   已下载:9.09% 下载1章 总共11章
+2019-04-22 18:33:29,227 INFO ikantxt2[line:234] section_name:[2.有人在家吗？], url:[https://www.biqukan.com/64_64465/472982056.html]
+2019-04-22 18:33:30,006 INFO ikantxt2[line:237]   已下载:18.18% 下载2章 总共11章
+2019-04-22 18:33:30,006 INFO ikantxt2[line:234] section_name:[3. 可惜，没如果], url:[https://www.biqukan.com/64_64465/472833419.html]
+2019-04-22 18:33:30,773 INFO ikantxt2[line:237]   已下载:27.27% 下载3章 总共11章
+2019-04-22 18:33:30,773 INFO ikantxt2[line:234] section_name:[4.一辆驶向郊区的车], url:[https://www.biqukan.com/64_64465/472669238.html]
+2019-04-22 18:33:32,226 INFO ikantxt2[line:237]   已下载:36.36% 下载4章 总共11章
+2019-04-22 18:33:32,226 INFO ikantxt2[line:234] section_name:[5．你真的看不到我吗？], url:[https://www.biqukan.com/64_64465/472612300.html]
+2019-04-22 18:33:32,928 INFO ikantxt2[line:237]   已下载:45.45% 下载5章 总共11章
+2019-04-22 18:33:32,930 INFO ikantxt2[line:234] section_name:[6. 指尖有电流], url:[https://www.biqukan.com/64_64465/472366688.html]
+2019-04-22 18:33:33,640 INFO ikantxt2[line:237]   已下载:54.55% 下载6章 总共11章
+2019-04-22 18:33:33,641 INFO ikantxt2[line:234] section_name:[7．神经病], url:[https://www.biqukan.com/64_64465/472237913.html]
+2019-04-22 18:33:34,361 INFO ikantxt2[line:237]   已下载:63.64% 下载7章 总共11章
+2019-04-22 18:33:34,361 INFO ikantxt2[line:239] section_name:7．神经病1 biqukan.com, url:https://www.biqukan.com/64_64465/472237913.html
+2019-04-22 18:33:34,362 INFO ikantxt2[line:240]   已下载:72.73% 已下载8章 总共11章
+2019-04-22 18:33:34,364 INFO ikantxt2[line:239] section_name:7．神经病2 biqukan.com, url:https://www.biqukan.com/64_64465/472237913.html
+2019-04-22 18:33:34,365 INFO ikantxt2[line:240]   已下载:81.82% 已下载9章 总共11章
+2019-04-22 18:33:34,365 INFO ikantxt2[line:239] section_name:7．神经病3 biqukan.com, url:https://www.biqukan.com/64_64465/472237913.html
+2019-04-22 18:33:34,367 INFO ikantxt2[line:240]   已下载:90.91% 已下载10章 总共11章
+2019-04-22 18:33:34,368 INFO ikantxt2[line:239] section_name:7．神经病4 biqukan.com, url:https://www.biqukan.com/64_64465/472237913.html
+2019-04-22 18:33:34,368 INFO ikantxt2[line:240]   已下载:100.00% 已下载11章 总共11章
+2019-04-22 18:33:34,368 INFO ikantxt2[line:241] 下载<<超级时刻>>完成
+2019-04-22 18:33:34,384 INFO ikantxt2[line:263]  超级时刻 下载完成 已经下载1本，剩余182本
+2019-04-22 18:34:04,387 INFO ikantxt2[line:191] download 都市无敌医圣 to /downloads/小说/[都市小说]/可爱冬瓜/都市无敌医圣.txt
+2019-04-22 18:34:06,223 INFO ikantxt2[line:230] 开始下载都市无敌医圣:
+2019-04-22 18:34:06,223 INFO ikantxt2[line:234] section_name:[第1章 混世魔王], url:[https://www.biqukan.com/43_43101/16359672.html]
+2019-04-22 18:34:06,936 INFO ikantxt2[line:237]   已下载:0.11% 下载1章 总共891章
+2019-04-22 18:34:06,937 INFO ikantxt2[line:234] section_name:[第2章 她是我的女人], url:[https://www.biqukan.com/43_43101/16359673.html]
+2019-04-22 18:34:07,655 INFO ikantxt2[line:237]   已下载:0.22% 下载2章 总共891章
+2019-04-22 18:34:07,657 INFO ikantxt2[line:234] section_name:[第3章 当成了屁而已], url:[https://www.biqukan.com/43_43101/16359674.html]
+2019-04-22 18:34:08,375 INFO ikantxt2[line:237]   已下载:0.34% 下载3章 总共891章
+2019-04-22 18:34:08,377 INFO ikantxt2[line:234] section_name:[第4章 一掌抽飞], url:[https://www.biqukan.com/43_43101/16359675.html]
+2019-04-22 18:34:09,095 INFO ikantxt2[line:237]   已下载:0.45% 下载4章 总共891章
+2019-04-22 18:34:09,095 INFO ikantxt2[line:234] section_name:[第5章 正人君子], url:[https://www.biqukan.com/43_43101/16359676.html]
+2019-04-22 18:34:09,818 INFO ikantxt2[line:237]   已下载:0.56% 下载5章 总共891章
+2019-04-22 18:34:09,819 INFO ikantxt2[line:234] section_name:[第6章 绝美校花], url:[https://www.biqukan.com/43_43101/16359677.html]
+2019-04-22 18:34:10,546 INFO ikantxt2[line:237]   已下载:0.67% 下载6章 总共891章
+2019-04-22 18:34:10,548 INFO ikantxt2[line:234] section_name:[第7章 别放屁了好吗], url:[https://www.biqukan.com/43_43101/16359678.html]
+2019-04-22 18:34:11,265 INFO ikantxt2[line:237]   已下载:0.79% 下载7章 总共891章
+2019-04-22 18:34:11,266 INFO ikantxt2[line:234] section_name:[第8章 把球给我], url:[https://www.biqukan.com/43_43101/16359679.html]
+2019-04-22 18:34:12,002 INFO ikantxt2[line:237]   已下载:0.90% 下载8章 总共891章
+2019-04-22 18:34:12,003 INFO ikantxt2[line:234] section_name:[第9章 饿虎扑羊], url:[https://www.biqukan.com/43_43101/16359680.html]
+2019-04-22 18:34:12,719 INFO ikantxt2[line:237]   已下载:1.01% 下载9章 总共891章
+2019-04-22 18:34:12,720 INFO ikantxt2[line:234] section_name:[第10章 秀恩爱], url:[https://www.biqukan.com/43_43101/16359681.html]
+2019-04-22 18:34:13,443 INFO ikantxt2[line:237]   已下载:1.12% 下载10章 总共891章
+2019-04-22 18:34:13,444 INFO ikantxt2[line:234] section_name:[第11章 恐怖高手], url:[https://www.biqukan.com/43_43101/16359682.html]
+2019-04-22 18:34:14,160 INFO ikantxt2[line:237]   已下载:1.23% 下载11章 总共891章
+2019-04-22 18:34:14,160 INFO ikantxt2[line:234] section_name:[第12章 水果打人，神乎其技], url:[https://www.biqukan.com/43_43101/16359683.html]
+2019-04-22 18:34:14,872 INFO ikantxt2[line:237]   已下载:1.35% 下载12章 总共891章
+2019-04-22 18:34:14,874 INFO ikantxt2[line:234] section_name:[第13章 大小姐的菜也吃得进去？], url:[https://www.biqukan.com/43_43101/16359684.html]
+2019-04-22 18:34:15,595 INFO ikantxt2[line:237]   已下载:1.46% 下载13章 总共891章
+2019-04-22 18:34:15,595 INFO ikantxt2[line:234] section_name:[第14章 怎么还找这种庸医？], url:[https://www.biqukan.com/43_43101/16359685.html]
+2019-04-22 18:34:16,311 INFO ikantxt2[line:237]   已下载:1.57% 下载14章 总共891章
+2019-04-22 18:34:16,312 INFO ikantxt2[line:234] section_name:[第15章 做你女友？], url:[https://www.biqukan.com/43_43101/16359686.html]
+2019-04-22 18:34:17,759 INFO ikantxt2[line:237]   已下载:1.68% 下载15章 总共891章
+2019-04-22 18:34:17,759 INFO ikantxt2[line:234] section_name:[第16章 火爆女警], url:[https://www.biqukan.com/43_43101/16359687.html]
+2019-04-22 18:34:18,473 INFO ikantxt2[line:237]   已下载:1.80% 下载16章 总共891章
+2019-04-22 18:34:18,473 INFO ikantxt2[line:234] section_name:[第17章 话题人物], url:[https://www.biqukan.com/43_43101/16359688.html]
+2019-04-22 18:34:19,204 INFO ikantxt2[line:237]   已下载:1.91% 下载17章 总共891章
+2019-04-22 18:34:19,206 INFO ikantxt2[line:234] section_name:[第18章 全班哗然], url:[https://www.biqukan.com/43_43101/16359689.html]
+2019-04-22 18:34:19,927 INFO ikantxt2[line:237]   已下载:2.02% 下载18章 总共891章
+2019-04-22 18:34:19,928 INFO ikantxt2[line:234] section_name:[第19章 真正的天才], url:[https://www.biqukan.com/43_43101/16359690.html]
+2019-04-22 18:34:20,651 INFO ikantxt2[line:237]   已下载:2.13% 下载19章 总共891章
+2019-04-22 18:34:20,651 INFO ikantxt2[line:234] section_name:[第20章 气吐血了], url:[https://www.biqukan.com/43_43101/16359691.html]
+2019-04-22 18:34:21,503 INFO ikantxt2[line:237]   已下载:2.24% 下载20章 总共891章
+2019-04-22 18:34:21,505 INFO ikantxt2[line:234] section_name:[第21章 钱豪本尊], url:[https://www.biqukan.com/43_43101/16359692.html]
+2019-04-22 18:34:22,204 INFO ikantxt2[line:237]   已下载:2.36% 下载21章 总共891章
+2019-04-22 18:34:22,206 INFO ikantxt2[line:234] section_name:[第22章 横扫], url:[https://www.biqukan.com/43_43101/16359693.html]
+2019-04-22 18:34:22,918 INFO ikantxt2[line:237]   已下载:2.47% 下载22章 总共891章
+2019-04-22 18:34:22,920 INFO ikantxt2[line:234] section_name:[第23章 都滚吧], url:[https://www.biqukan.com/43_43101/16359694.html]
+2019-04-22 18:34:23,641 INFO ikantxt2[line:237]   已下载:2.58% 下载23章 总共891章
+2019-04-22 18:34:23,641 INFO ikantxt2[line:234] section_name:[第24章 沐天罡的拉拢], url:[https://www.biqukan.com/43_43101/16359695.html]
+2019-04-22 18:34:24,355 INFO ikantxt2[line:237]   已下载:2.69% 下载24章 总共891章
+2019-04-22 18:34:24,357 INFO ikantxt2[line:234] section_name:[第25章 兵王报复], url:[https://www.biqukan.com/43_43101/16359697.html]
+2019-04-22 18:34:25,065 INFO ikantxt2[line:237]   已下载:2.81% 下载25章 总共891章
+2019-04-22 18:34:25,066 INFO ikantxt2[line:234] section_name:[第26章 美女警花，你有病], url:[https://www.biqukan.com/43_43101/16359698.html]
+2019-04-22 18:34:25,780 INFO ikantxt2[line:237]   已下载:2.92% 下载26章 总共891章
+2019-04-22 18:34:25,782 INFO ikantxt2[line:234] section_name:[第27章 你也有病], url:[https://www.biqukan.com/43_43101/16359699.html]
+2019-04-22 18:34:26,509 INFO ikantxt2[line:237]   已下载:3.03% 下载27章 总共891章
+2019-04-22 18:34:26,509 INFO ikantxt2[line:234] section_name:[第28章 第二根半价], url:[https://www.biqukan.com/43_43101/16359700.html]
+2019-04-22 18:34:27,217 INFO ikantxt2[line:237]   已下载:3.14% 下载28章 总共891章
+2019-04-22 18:34:27,217 INFO ikantxt2[line:234] section_name:[第29章 恐怖的身手], url:[https://www.biqukan.com/43_43101/16359701.html]
+2019-04-22 18:34:27,940 INFO ikantxt2[line:237]   已下载:3.25% 下载29章 总共891章
+2019-04-22 18:34:27,940 INFO ikantxt2[line:234] section_name:[第30章 他是叶轩？快逃！], url:[https://www.biqukan.com/43_43101/16359702.html]
+2019-04-22 18:34:29,631 INFO ikantxt2[line:237]   已下载:3.37% 下载30章 总共891章
+2019-04-22 18:34:29,632 INFO ikantxt2[line:234] section_name:[第31章 就凭这个], url:[https://www.biqukan.com/43_43101/16359703.html]
+2019-04-22 18:34:30,348 INFO ikantxt2[line:237]   已下载:3.48% 下载31章 总共891章
+2019-04-22 18:34:30,348 INFO ikantxt2[line:234] section_name:[第32章 我肯定比你们聪明], url:[https://www.biqukan.com/43_43101/16359704.html]
+2019-04-22 18:34:31,075 INFO ikantxt2[line:237]   已下载:3.59% 下载32章 总共891章
+2019-04-22 18:34:31,076 INFO ikantxt2[line:234] section_name:[第33章 抓狂的教练], url:[https://www.biqukan.com/43_43101/16359705.html]
+2019-04-22 18:34:31,871 INFO ikantxt2[line:237]   已下载:3.70% 下载33章 总共891章
+2019-04-22 18:34:31,871 INFO ikantxt2[line:234] section_name:[第34章 一定是幻觉！], url:[https://www.biqukan.com/43_43101/16359706.html]
+2019-04-22 18:34:32,736 INFO ikantxt2[line:237]   已下载:3.82% 下载34章 总共891章
+2019-04-22 18:34:32,736 INFO ikantxt2[line:234] section_name:[第35章 三脚两脚踢成狗], url:[https://www.biqukan.com/43_43101/16359707.html]
+2019-04-22 18:34:33,535 INFO ikantxt2[line:237]   已下载:3.93% 下载35章 总共891章
+2019-04-22 18:34:33,536 INFO ikantxt2[line:234] section_name:[第36章 你们都被我打过吧？], url:[https://www.biqukan.com/43_43101/16359709.html]
+2019-04-22 18:34:34,243 INFO ikantxt2[line:237]   已下载:4.04% 下载36章 总共891章
+2019-04-22 18:34:34,244 INFO ikantxt2[line:234] section_name:[第37章 很好，你们完了], url:[https://www.biqukan.com/43_43101/16359710.html]
+2019-04-22 18:35:48,783 INFO ikantxt2[line:38] init bs
+2019-04-22 18:35:48,785 INFO spider[line:57] get scheduler event <JobEvent (code=512)>
+2019-04-22 18:40:44,394 INFO ikantxt2[line:139] 类型:[其他] 名称:妖孽王爷的呆萌狂妃 链接:https://www.biqukan.com/64_64467/ 作者:unknown
+2019-04-22 18:40:44,394 INFO ikantxt2[line:139] 类型:[科幻] 名称:快穿之花样作死 链接:https://www.biqukan.com/64_64466/ 作者:unknown
+2019-04-22 18:40:44,395 INFO ikantxt2[line:139] 类型:[科幻] 名称:超级时刻 链接:https://www.biqukan.com/64_64465/ 作者:unknown
+2019-04-22 18:40:44,395 INFO ikantxt2[line:139] 类型:[玄幻] 名称:在斗罗大陆开始的穿越日常 链接:https://www.biqukan.com/64_64464/ 作者:unknown
+2019-04-22 18:40:44,397 INFO ikantxt2[line:139] 类型:[穿越] 名称:真假世子妃 链接:https://www.biqukan.com/64_64463/ 作者:unknown
+2019-04-22 18:40:44,398 INFO ikantxt2[line:139] 类型:[修真] 名称:天地之七绝 链接:https://www.biqukan.com/64_64462/ 作者:unknown
+2019-04-22 18:40:44,398 INFO ikantxt2[line:139] 类型:[都市] 名称:星辰本是一对 链接:https://www.biqukan.com/64_64461/ 作者:unknown
+2019-04-22 18:40:44,398 INFO ikantxt2[line:139] 类型:[穿越] 名称:流离间见琉璃 链接:https://www.biqukan.com/64_64460/ 作者:unknown
+2019-04-22 18:40:44,400 INFO ikantxt2[line:139] 类型:[修真] 名称:剑颂 链接:https://www.biqukan.com/64_64459/ 作者:unknown
+2019-04-22 18:40:44,401 INFO ikantxt2[line:139] 类型:[其他] 名称:纭深不知璟 链接:https://www.biqukan.com/64_64458/ 作者:unknown
+2019-04-22 18:40:44,401 INFO ikantxt2[line:139] 类型:[其他] 名称:余生，不弃 链接:https://www.biqukan.com/64_64457/ 作者:unknown
+2019-04-22 18:40:44,401 INFO ikantxt2[line:139] 类型:[其他] 名称:狐世说 链接:https://www.biqukan.com/64_64456/ 作者:unknown
+2019-04-22 18:40:44,403 INFO ikantxt2[line:139] 类型:[其他] 名称:余生，定不负卿 链接:https://www.biqukan.com/64_64455/ 作者:unknown
+2019-04-22 18:40:44,403 INFO ikantxt2[line:139] 类型:[穿越] 名称:御权策：陛下风华绝代 链接:https://www.biqukan.com/64_64454/ 作者:unknown
+2019-04-22 18:40:44,404 INFO ikantxt2[line:139] 类型:[修真] 名称:千万妖魔听我使唤 链接:https://www.biqukan.com/64_64453/ 作者:unknown
+2019-04-22 18:40:44,404 INFO ikantxt2[line:139] 类型:[都市] 名称:病态宠爱：甜妻，休想逃 链接:https://www.biqukan.com/64_64452/ 作者:unknown
+2019-04-22 18:40:44,405 INFO ikantxt2[line:139] 类型:[网游] 名称:称号之下 链接:https://www.biqukan.com/64_64451/ 作者:unknown
+2019-04-22 18:40:44,408 INFO ikantxt2[line:139] 类型:[穿越] 名称:明月炉 链接:https://www.biqukan.com/64_64450/ 作者:unknown
+2019-04-22 18:40:44,410 INFO ikantxt2[line:139] 类型:[其他] 名称:妙女多娇 链接:https://www.biqukan.com/64_64449/ 作者:unknown
+2019-04-22 18:40:44,410 INFO ikantxt2[line:139] 类型:[科幻] 名称:万界第一猛士 链接:https://www.biqukan.com/64_64448/ 作者:unknown
+2019-04-22 18:40:44,411 INFO ikantxt2[line:139] 类型:[科幻] 名称:从铠甲开始变强 链接:https://www.biqukan.com/64_64447/ 作者:unknown
+2019-04-22 18:40:44,411 INFO ikantxt2[line:139] 类型:[其他] 名称:月光倾城不及你 链接:https://www.biqukan.com/64_64446/ 作者:unknown
+2019-04-22 18:40:44,413 INFO ikantxt2[line:139] 类型:[其他] 名称:阎王，好久不见 链接:https://www.biqukan.com/64_64445/ 作者:unknown
+2019-04-22 18:40:44,414 INFO ikantxt2[line:139] 类型:[其他] 名称:盾之勇者世界的御主 链接:https://www.biqukan.com/64_64444/ 作者:unknown
+2019-04-22 18:40:44,414 INFO ikantxt2[line:139] 类型:[其他] 名称:小曦逆流而上！ 链接:https://www.biqukan.com/64_64443/ 作者:unknown
+2019-04-22 18:40:44,414 INFO ikantxt2[line:139] 类型:[都市] 名称:灵气复苏之回收系统 链接:https://www.biqukan.com/64_64442/ 作者:unknown
+2019-04-22 18:40:44,415 INFO ikantxt2[line:139] 类型:[科幻] 名称:炮灰攻略：最强筑梦师 链接:https://www.biqukan.com/64_64441/ 作者:unknown
+2019-04-22 18:40:44,415 INFO ikantxt2[line:139] 类型:[科幻] 名称:叛逆行者 链接:https://www.biqukan.com/64_64440/ 作者:unknown
+2019-04-22 18:40:44,417 INFO ikantxt2[line:139] 类型:[都市] 名称:隐婚密爱：傅少求放过 链接:https://www.biqukan.com/64_64439/ 作者:unknown
+2019-04-22 18:40:44,417 INFO ikantxt2[line:139] 类型:[穿越] 名称:一妃难求：冷傲帝王不经撩 链接:https://www.biqukan.com/64_64438/ 作者:unknown
+2019-04-22 18:40:44,427 INFO ikantxt2[line:89] 类型:[修真] 名称:滇娇传之天悦东方 链接:https://www.biqukan.com/0_784/ 作者:耳根
+2019-04-22 18:40:44,427 INFO ikantxt2[line:89] 类型:[玄幻] 名称:圣墟 链接:https://www.biqukan.com/0_178/ 作者:辰东
+2019-04-22 18:40:44,430 INFO ikantxt2[line:89] 类型:[其他] 名称:天道图书馆 链接:https://www.biqukan.com/17_17957/ 作者:横扫天涯
+2019-04-22 18:40:44,430 INFO ikantxt2[line:89] 类型:[玄幻] 名称:武道宗师 链接:https://www.biqukan.com/1_1452/ 作者:爱潜水的乌贼
+2019-04-22 18:40:44,431 INFO ikantxt2[line:89] 类型:[玄幻] 名称:龙王传说 链接:https://www.biqukan.com/1_1496/ 作者:唐家三少
+2019-04-22 18:40:44,433 INFO ikantxt2[line:89] 类型:[修真] 名称:凡人修仙之仙界篇 链接:https://www.biqukan.com/0_319/ 作者:忘语
+2019-04-22 18:40:44,434 INFO ikantxt2[line:89] 类型:[修真] 名称:六迹之梦魇宫 链接:https://www.biqukan.com/1_1020/ 作者:忘语
+2019-04-22 18:40:44,434 INFO ikantxt2[line:89] 类型:[玄幻] 名称:牧神记 链接:https://www.biqukan.com/17_17225/ 作者:宅猪
+2019-04-22 18:40:44,437 INFO ikantxt2[line:89] 类型:[修真] 名称:三寸人间 链接:https://www.biqukan.com/0_159/ 作者:耳根
+2019-04-22 18:40:44,447 INFO ikantxt2[line:101] top:三界独尊 url:https://www.biqukan.com/0_973/
+2019-04-22 18:40:44,447 INFO ikantxt2[line:109] 类型:玄幻小说 名称:校园修真高手 链接:https://www.biqukan.com/31_31729/ 作者:木榆
+2019-04-22 18:40:44,447 INFO ikantxt2[line:109] 类型:玄幻小说 名称:雄霸神荒 链接:https://www.biqukan.com/12_12303/ 作者:刀落
+2019-04-22 18:40:44,448 INFO ikantxt2[line:109] 类型:玄幻小说 名称:独步天途 链接:https://www.biqukan.com/20_20951/ 作者:玄雨
+2019-04-22 18:40:44,448 INFO ikantxt2[line:109] 类型:玄幻小说 名称:青云直上 链接:https://www.biqukan.com/30_30398/ 作者:鹅城知县
+2019-04-22 18:40:44,450 INFO ikantxt2[line:109] 类型:玄幻小说 名称:柯南世界里的巫师 链接:https://www.biqukan.com/17_17065/ 作者:追梦人Love平
+2019-04-22 18:40:44,450 INFO ikantxt2[line:109] 类型:玄幻小说 名称:绝对选项 链接:https://www.biqukan.com/20_20518/ 作者:梨落秋溪
+2019-04-22 18:40:44,450 INFO ikantxt2[line:109] 类型:玄幻小说 名称:食戟之冒牌小当家 链接:https://www.biqukan.com/26_26156/ 作者:绅士东
+2019-04-22 18:40:44,450 INFO ikantxt2[line:109] 类型:玄幻小说 名称:剑与魔法与出租车 链接:https://www.biqukan.com/19_19671/ 作者:索斯
+2019-04-22 18:40:44,450 INFO ikantxt2[line:109] 类型:玄幻小说 名称:三界狂徒 链接:https://www.biqukan.com/24_24125/ 作者:单水水
+2019-04-22 18:40:44,451 INFO ikantxt2[line:109] 类型:玄幻小说 名称:青莲剑说 链接:https://www.biqukan.com/20_20795/ 作者:华表
+2019-04-22 18:40:44,451 INFO ikantxt2[line:109] 类型:玄幻小说 名称:万法梵医 链接:https://www.biqukan.com/21_21493/ 作者:相思洗红豆
+2019-04-22 18:40:44,451 INFO ikantxt2[line:109] 类型:玄幻小说 名称:顾盼成欢 链接:https://www.biqukan.com/24_24528/ 作者:莞迩
+2019-04-22 18:40:44,463 INFO ikantxt2[line:101] top:地球唯一修士 url:https://www.biqukan.com/18_18805/
+2019-04-22 18:40:44,463 INFO ikantxt2[line:109] 类型:修真小说 名称:无相仙诀 链接:https://www.biqukan.com/24_24209/ 作者:齐氏小白
+2019-04-22 18:40:44,463 INFO ikantxt2[line:109] 类型:修真小说 名称:唯仙独行 链接:https://www.biqukan.com/13_13559/ 作者:余鹤南枝
+2019-04-22 18:40:44,464 INFO ikantxt2[line:109] 类型:修真小说 名称:武侠世界自由行 链接:https://www.biqukan.com/12_12542/ 作者:大江入海
+2019-04-22 18:40:44,464 INFO ikantxt2[line:109] 类型:修真小说 名称:太易 链接:https://www.biqukan.com/11_11056/ 作者:无极书虫
+2019-04-22 18:40:44,466 INFO ikantxt2[line:109] 类型:修真小说 名称:阴阳道典 链接:https://www.biqukan.com/24_24586/ 作者:胖亦有道
+2019-04-22 18:40:44,466 INFO ikantxt2[line:109] 类型:修真小说 名称:修真门派掌门路 链接:https://www.biqukan.com/9_9145/ 作者:齐可休
+2019-04-22 18:40:44,466 INFO ikantxt2[line:109] 类型:修真小说 名称:三界仙缘 链接:https://www.biqukan.com/16_16418/ 作者:东山火
+2019-04-22 18:40:44,467 INFO ikantxt2[line:109] 类型:修真小说 名称:大神皇 链接:https://www.biqukan.com/15_15923/ 作者:水冷酒家
+2019-04-22 18:40:44,467 INFO ikantxt2[line:109] 类型:修真小说 名称:仙道横行 链接:https://www.biqukan.com/24_24194/ 作者:小无相公
+2019-04-22 18:40:44,467 INFO ikantxt2[line:109] 类型:修真小说 名称:无界仙皇 链接:https://www.biqukan.com/18_18220/ 作者:石三
+2019-04-22 18:40:44,467 INFO ikantxt2[line:109] 类型:修真小说 名称:寻师有计出师表 链接:https://www.biqukan.com/17_17851/ 作者:执剑问情
+2019-04-22 18:40:44,469 INFO ikantxt2[line:109] 类型:修真小说 名称:刀剑聊斋 链接:https://www.biqukan.com/16_16310/ 作者:南宫吟
+2019-04-22 18:40:44,480 INFO ikantxt2[line:101] top:校花之贴身高手 url:https://www.biqukan.com/11_11499/
+2019-04-22 18:40:44,482 INFO ikantxt2[line:109] 类型:都市小说 名称:都市最强特种兵 链接:https://www.biqukan.com/40_40461/ 作者:尼姑庵的和尚
+2019-04-22 18:40:44,482 INFO ikantxt2[line:109] 类型:都市小说 名称:妖孽兵王 链接:https://www.biqukan.com/2_2443/ 作者:妙手摘星
+2019-04-22 18:40:44,482 INFO ikantxt2[line:109] 类型:都市小说 名称:贼警 链接:https://www.biqukan.com/20_20960/ 作者:虾写
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之悠闲 链接:https://www.biqukan.com/1_1359/ 作者:呆萌的瑜
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:纯禽记者 链接:https://www.biqukan.com/11_11994/ 作者:高冷的沐小婧
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:逍遥小镇长 链接:https://www.biqukan.com/1_1097/ 作者:全金属弹壳
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:韩娱之光影交错 链接:https://www.biqukan.com/0_62/ 作者:姬叉
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:终末之城 链接:https://www.biqukan.com/18_18420/ 作者:西贝猫
+2019-04-22 18:40:44,483 INFO ikantxt2[line:109] 类型:都市小说 名称:宁小闲御神录 链接:https://www.biqukan.com/1_1432/ 作者:风行水云间
+2019-04-22 18:40:44,484 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之妙手狂医 链接:https://www.biqukan.com/24_24527/ 作者:最帅的帅白
+2019-04-22 18:40:44,484 INFO ikantxt2[line:109] 类型:都市小说 名称:重生之抠脚大汉变男神 链接:https://www.biqukan.com/16_16958/ 作者:二宝天使
+2019-04-22 18:40:44,486 INFO ikantxt2[line:109] 类型:都市小说 名称:女神的近身护卫 链接:https://www.biqukan.com/0_20/ 作者:肥茄子
+2019-04-22 18:40:44,502 INFO ikantxt2[line:101] top:孺子帝 url:https://www.biqukan.com/1_1267/
+2019-04-22 18:40:44,502 INFO ikantxt2[line:109] 类型:穿越小说 名称:猎杀全球 链接:https://www.biqukan.com/20_20962/ 作者:白色米饭
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:红色脊梁 链接:https://www.biqukan.com/19_19928/ 作者:巨火
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:我的老婆是土匪 链接:https://www.biqukan.com/11_11408/ 作者:千斤顶
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:大国医 链接:https://www.biqukan.com/16_16083/ 作者:美味罗宋汤
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:护花大国士 链接:https://www.biqukan.com/20_20479/ 作者:庄不周
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:超级响马系统 链接:https://www.biqukan.com/20_20989/ 作者:解甲归田
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:我在三国打直播 链接:https://www.biqukan.com/19_19271/ 作者:白皮小火车
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:三国之无限召唤 链接:https://www.biqukan.com/1_1736/ 作者:堂燕归来
+2019-04-22 18:40:44,503 INFO ikantxt2[line:109] 类型:穿越小说 名称:大明才子风云录 链接:https://www.biqukan.com/15_15927/ 作者:尚南山
+2019-04-22 18:40:44,505 INFO ikantxt2[line:109] 类型:穿越小说 名称:断狱 链接:https://www.biqukan.com/24_24088/ 作者:离人望左岸
+2019-04-22 18:40:44,505 INFO ikantxt2[line:109] 类型:穿越小说 名称:抗战之无双战将 链接:https://www.biqukan.com/10_10245/ 作者:步枪打蚊子
+2019-04-22 18:40:44,506 INFO ikantxt2[line:109] 类型:穿越小说 名称:大明闲人 链接:https://www.biqukan.com/16_16416/ 作者:大篷车
+2019-04-22 18:40:44,516 INFO ikantxt2[line:101] top:网游之大盗贼 url:https://www.biqukan.com/11_11345/
+2019-04-22 18:40:44,517 INFO ikantxt2[line:109] 类型:网游小说 名称:剑娘 链接:https://www.biqukan.com/10_10361/ 作者:沧澜波涛短
+2019-04-22 18:40:44,517 INFO ikantxt2[line:109] 类型:网游小说 名称:全职BOSS 链接:https://www.biqukan.com/10_10242/ 作者:宝月流光
+2019-04-22 18:40:44,517 INFO ikantxt2[line:109] 类型:网游小说 名称:俺是一个贼 链接:https://www.biqukan.com/16_16126/ 作者:关嘲
+2019-04-22 18:40:44,517 INFO ikantxt2[line:109] 类型:网游小说 名称:战神领主 链接:https://www.biqukan.com/4_4146/ 作者:木牛流猫
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:琥珀之剑 链接:https://www.biqukan.com/3_3742/ 作者:绯炎
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:英雄联盟之荣耀崛起 链接:https://www.biqukan.com/16_16013/ 作者:东城十四少
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:战破苍穹 链接:https://www.biqukan.com/25_25977/ 作者:龙大人
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:重生之轮回修罗 链接:https://www.biqukan.com/15_15968/ 作者:拉风的小狐狸
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:末世图腾 链接:https://www.biqukan.com/16_16244/ 作者:辉煌战狼
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:圣魔猎手 链接:https://www.biqukan.com/11_11403/ 作者:核动力重坦
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:武侠世界里的超级玩家 链接:https://www.biqukan.com/16_16594/ 作者:想枕头的瞌睡
+2019-04-22 18:40:44,519 INFO ikantxt2[line:109] 类型:网游小说 名称:网游之法师的逆袭 链接:https://www.biqukan.com/16_16114/ 作者:开车的时候嚼炫迈
+2019-04-22 18:40:44,529 INFO ikantxt2[line:101] top:网游之巅峰召唤 url:https://www.biqukan.com/34_34587/
+2019-04-22 18:40:44,530 INFO ikantxt2[line:109] 类型:科幻小说 名称:未来游乐场 链接:https://www.biqukan.com/21_21598/ 作者:奥比椰
+2019-04-22 18:40:44,530 INFO ikantxt2[line:109] 类型:科幻小说 名称:帝临武侠 链接:https://www.biqukan.com/15_15726/ 作者:隔壁老王01
+2019-04-22 18:40:44,530 INFO ikantxt2[line:109] 类型:科幻小说 名称:铁掌无敌王小军 链接:https://www.biqukan.com/1_1438/ 作者:张小花
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:未来之军娘在上 链接:https://www.biqukan.com/0_744/ 作者:油爆香菇
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:核血机心 链接:https://www.biqukan.com/21_21117/ 作者:愤怒的星期天
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:进化狂潮 链接:https://www.biqukan.com/16_16286/ 作者:兔子专吃窝边草
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:美漫之血清 链接:https://www.biqukan.com/23_23166/ 作者:龙王的后代
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:二次元王座 链接:https://www.biqukan.com/20_20604/ 作者:二次元白菜
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:美漫之大冬兵 链接:https://www.biqukan.com/22_22960/ 作者:育
+2019-04-22 18:40:44,532 INFO ikantxt2[line:109] 类型:科幻小说 名称:末世危城 链接:https://www.biqukan.com/16_16303/ 作者:熊猫快跑
+2019-04-22 18:40:44,533 INFO ikantxt2[line:109] 类型:科幻小说 名称:带口铁锅闯末世 链接:https://www.biqukan.com/24_24994/ 作者:笑死鸟
+2019-04-22 18:40:44,533 INFO ikantxt2[line:109] 类型:科幻小说 名称:末世之红警崛起 链接:https://www.biqukan.com/19_19601/ 作者:为情成痴
+2019-04-22 18:40:45,622 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:恐怖机场 链接:https://www.biqukan.com/57_57530/ 作者:北极猎手
+2019-04-22 18:40:45,625 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:焦土黎明 链接:https://www.biqukan.com/57_57632/ 作者:狼家二萌神
+2019-04-22 18:40:45,627 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:凌霄之上 链接:https://www.biqukan.com/39_39496/ 作者:观棋
+2019-04-22 18:40:45,628 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:重生之低调大亨 链接:https://www.biqukan.com/57_57514/ 作者:易水寒春秋
+2019-04-22 18:40:45,628 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:带着地球去封神 链接:https://www.biqukan.com/57_57222/ 作者:笙箫剑客
+2019-04-22 18:40:45,631 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:一剑独尊 链接:https://www.biqukan.com/57_57527/ 作者:青鸾峰上
+2019-04-22 18:40:45,632 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:重生之游戏大亨 链接:https://www.biqukan.com/57_57540/ 作者:成刚
+2019-04-22 18:40:45,634 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:小人物的非凡之路 链接:https://www.biqukan.com/57_57535/ 作者:创里有作
+2019-04-22 18:40:45,634 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:我在北美当律师 链接:https://www.biqukan.com/57_57227/ 作者:春夏秋冬眠
+2019-04-22 18:40:45,635 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:明末求生记 链接:https://www.biqukan.com/57_57536/ 作者:名剑山庄
+2019-04-22 18:40:45,635 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:战天武录 链接:https://www.biqukan.com/57_57547/ 作者:红酒加可乐1
+2019-04-22 18:40:45,637 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:盖帽高手 链接:https://www.biqukan.com/57_57168/ 作者:站立的西瓜
+2019-04-22 18:40:45,638 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:武道地球 链接:https://www.biqukan.com/57_57188/ 作者:疯子话
+2019-04-22 18:40:45,638 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:万界合流 链接:https://www.biqukan.com/57_57573/ 作者:心冰
+2019-04-22 18:40:45,641 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:破碎命盘 链接:https://www.biqukan.com/57_57539/ 作者:孙悟远
+2019-04-22 18:40:45,641 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:大宋奸臣 链接:https://www.biqukan.com/57_57615/ 作者:乃去
+2019-04-22 18:40:45,642 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:玲珑江湖 链接:https://www.biqukan.com/57_57526/ 作者:建安瘦
+2019-04-22 18:40:45,644 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:道神 链接:https://www.biqukan.com/2_2644/ 作者:凌乱的小道
+2019-04-22 18:40:45,644 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:传奇族长 链接:https://www.biqukan.com/2_2028/ 作者:山人有妙计
+2019-04-22 18:40:45,644 INFO ikantxt2[line:62] 类型:[其他小说](完本) 名称:火影之医者日记 链接:https://www.biqukan.com/57_57205/ 作者:吾名午夜
+2019-04-22 18:40:45,645 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:绝世皇帝 链接:https://www.biqukan.com/30_30243/ 作者:盛夏微暗
+2019-04-22 18:40:45,647 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:废土崛起 链接:https://www.biqukan.com/16_16636/ 作者:通吃道人.QD
+2019-04-22 18:40:45,648 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:鬼咒 链接:https://www.biqukan.com/16_16069/ 作者:念响
+2019-04-22 18:40:45,648 INFO ikantxt2[line:62] 类型:[科幻小说](完本) 名称:能穿越美漫的大奥术师 链接:https://www.biqukan.com/57_57173/ 作者:文艺官
+2019-04-22 18:40:45,650 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:都市巅峰强少 链接:https://www.biqukan.com/15_15896/ 作者:浪冰心火
+2019-04-22 18:40:45,651 INFO ikantxt2[line:62] 类型:[穿越小说](完本) 名称:乱明 链接:https://www.biqukan.com/26_26124/ 作者:喻心
+2019-04-22 18:40:45,651 INFO ikantxt2[line:62] 类型:[网游小说](完本) 名称:网游之厄运先生 链接:https://www.biqukan.com/34_34008/ 作者:二亩田
+2019-04-22 18:40:45,651 INFO ikantxt2[line:62] 类型:[玄幻小说](完本) 名称:巫颂 链接:https://www.biqukan.com/27_27875/ 作者:血红
+2019-04-22 18:40:45,653 INFO ikantxt2[line:62] 类型:[修真小说](完本) 名称:西游之龙道至尊 链接:https://www.biqukan.com/43_43744/ 作者:风雪寒漠
+2019-04-22 18:40:45,654 INFO ikantxt2[line:62] 类型:[都市小说](完本) 名称:邂逅神秘BOSS 链接:https://www.biqukan.com/15_15959/ 作者:纳兰海映
+2019-04-22 18:40:45,660 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:钻石王牌之最强打者 链接:https://www.biqukan.com/22_22978/ 作者:unknown
+2019-04-22 18:40:45,661 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:虫噬星空 链接:https://www.biqukan.com/19_19438/ 作者:unknown
+2019-04-22 18:40:45,661 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:最强神豪奶爸 链接:https://www.biqukan.com/51_51423/ 作者:unknown
+2019-04-22 18:40:45,661 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:调教大宋 链接:https://www.biqukan.com/20_20289/ 作者:unknown
+2019-04-22 18:40:45,663 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:极品富二代 链接:https://www.biqukan.com/0_10/ 作者:unknown
+2019-04-22 18:40:45,663 INFO ikantxt2[line:73] 类型:unknown(完本) 名称:弑天刃 链接:https://www.biqukan.com/0_523/ 作者:unknown
+2019-04-22 18:40:45,676 INFO ikantxt2[line:125] 类型:[修真小说] 名称:南溪醉 链接:https://www.biqukan.com/63_63695/ 作者:余喵喵 章节:280 章节链接:https://www.biqukan.com/63_63695/41944977.html
+2019-04-22 18:40:45,677 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:恶魔巫师 链接:https://www.biqukan.com/62_62335/ 作者:李洵家天下 章节:第0126章 血战丛林 章节链接:https://www.biqukan.com/62_62335/472218692.html
+2019-04-22 18:40:45,677 INFO ikantxt2[line:125] 类型:[都市小说] 名称:叶哥的传奇人生 链接:https://www.biqukan.com/45_45679/ 作者:蚂蚁很给力 章节:第969章 求战 章节链接:https://www.biqukan.com/45_45679/23487843.html
+2019-04-22 18:40:45,677 INFO ikantxt2[line:125] 类型:[其他小说] 名称:重生空间之全能军嫂 链接:https://www.biqukan.com/60_60322/ 作者:四叶荷 章节:第846章 暴风雨前的宁静（3） 章节链接:https://www.biqukan.com/60_60322/472218780.html
+2019-04-22 18:40:45,678 INFO ikantxt2[line:125] 类型:[其他小说] 名称:重生军营之最强军婚 链接:https://www.biqukan.com/60_60392/ 作者:咪菟 章节:第218章 小猫咪？ 章节链接:https://www.biqukan.com/60_60392/472309703.html
+2019-04-22 18:40:45,678 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:鬼王神令 链接:https://www.biqukan.com/64_64274/ 作者:渔潮跃龙 章节:第25章：魇(1) 章节链接:https://www.biqukan.com/64_64274/473397682.html
+2019-04-22 18:40:45,680 INFO ikantxt2[line:125] 类型:[都市小说] 名称:报告长官：夫人在捉鬼 链接:https://www.biqukan.com/64_64067/ 作者:染筱萋 章节:681 摁在地上摩擦（二更） 章节链接:https://www.biqukan.com/64_64067/41945244.html
+2019-04-22 18:40:45,680 INFO ikantxt2[line:125] 类型:[都市小说] 名称:我的传奇岁月 链接:https://www.biqukan.com/29_29773/ 作者:做梦无罪 章节:第1495章：谁的电话 章节链接:https://www.biqukan.com/29_29773/23487433.html
+2019-04-22 18:40:45,680 INFO ikantxt2[line:125] 类型:[网游小说] 名称:怪物聊天群 链接:https://www.biqukan.com/56_56821/ 作者:泛舟填词 章节:第0467章 比格沃斯先生炸毛了 章节链接:https://www.biqukan.com/56_56821/472218966.html
+2019-04-22 18:40:45,681 INFO ikantxt2[line:125] 类型:[其他小说] 名称:神秘老公：高调宠 链接:https://www.biqukan.com/61_61646/ 作者:凌娇儿 章节:第158章 他知道这孩子是谁了 章节链接:https://www.biqukan.com/61_61646/472323047.html
+2019-04-22 18:40:45,681 INFO ikantxt2[line:125] 类型:[修真小说] 名称:仙斋鬼话 链接:https://www.biqukan.com/57_57496/ 作者:鬼雨 章节:第369章 塑魂？ 章节链接:https://www.biqukan.com/57_57496/474959796.html
+2019-04-22 18:40:45,683 INFO ikantxt2[line:125] 类型:[都市小说] 名称:神医弃女：鬼帝的驭兽狂妃 链接:https://www.biqukan.com/0_847/ 作者:MS芙子 章节:第4854章 献殷勤？ 章节链接:https://www.biqukan.com/0_847/21712404.html
+2019-04-22 18:40:45,684 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:复苏崛起 链接:https://www.biqukan.com/63_63233/ 作者:北小泽 章节:第一百二十五章 火离 章节链接:https://www.biqukan.com/63_63233/472220017.html
+2019-04-22 18:40:45,684 INFO ikantxt2[line:125] 类型:[悬疑灵异] 名称:灵武帝尊 链接:https://www.biqukan.com/37_37269/ 作者:孤雨随风 章节:第2652章 天骄陨落 章节链接:https://www.biqukan.com/37_37269/23487883.html
+2019-04-22 18:40:45,684 INFO ikantxt2[line:125] 类型:[都市小说] 名称:锦堂归燕 链接:https://www.biqukan.com/24_24262/ 作者:风光霁月 章节:第一千零八章 围堵 章节链接:https://www.biqukan.com/24_24262/23487842.html
+2019-04-22 18:40:45,684 INFO ikantxt2[line:125] 类型:[科幻小说] 名称:矩阵游戏 链接:https://www.biqukan.com/56_56434/ 作者:刹那辉煌 章节:第十章 东尼：这个敌人看起来值得一战！ 章节链接:https://www.biqukan.com/56_56434/472219091.html
+2019-04-22 18:40:45,686 INFO ikantxt2[line:125] 类型:[穿越小说] 名称:汉献帝刘能 链接:https://www.biqukan.com/58_58783/ 作者:公子不瘦 章节:第八十七章 五陵刘能自轻肥 章节链接:https://www.biqukan.com/58_58783/472358588.html
+2019-04-22 18:40:45,687 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:最坑召唤系统 链接:https://www.biqukan.com/57_57380/ 作者:刀贱笑笑 章节:第391章 活捉阿萨佐（三） 章节链接:https://www.biqukan.com/57_57380/472219102.html
+2019-04-22 18:40:45,687 INFO ikantxt2[line:125] 类型:[科幻小说] 名称:孙小鹤的探灵日记 链接:https://www.biqukan.com/36_36752/ 作者:孙致远 章节:1000.一剑定胜负 章节链接:https://www.biqukan.com/36_36752/472219110.html
+2019-04-22 18:40:45,687 INFO ikantxt2[line:125] 类型:[玄幻小说] 名称:高武27世纪 链接:https://www.biqukan.com/62_62175/ 作者:草鱼L 章节:第135章 乌云断月 章节链接:https://www.biqukan.com/62_62175/472228862.html
+2019-04-22 18:40:45,688 INFO ikantxt2[line:125] 类型:[都市小说] 名称:逍遥小天师 链接:https://www.biqukan.com/63_63197/ 作者:乾坤有一 章节:第四百四十一章 自救 章节链接:https://www.biqukan.com/63_63197/38244209.html
+2019-04-22 18:40:45,690 INFO ikantxt2[line:125] 类型:[科幻小说] 名称:诸天万界人物大抽奖 链接:https://www.biqukan.com/64_64320/ 作者:可爱的小胖熊 章节:第四十二章 章节链接:https://www.biqukan.com/64_64320/472359399.html
+2019-04-22 18:40:45,690 INFO ikantxt2[line:125] 类型:[穿越小说] 名称:风谍 链接:https://www.biqukan.com/59_59778/ 作者:深蓝的国度 章节:第三百二十九章 亮明底线 章节链接:https://www.biqukan.com/59_59778/472219180.html
+2019-04-22 18:40:45,690 INFO ikantxt2[line:125] 类型:[穿越小说] 名称:大内胭脂铺 链接:https://www.biqukan.com/64_64370/ 作者:七月初九 章节:第31章 死（二更） 章节链接:https://www.biqukan.com/64_64370/41946559.html
+2019-04-22 18:40:45,691 INFO ikantxt2[line:125] 类型:[都市小说] 名称:日娱假偶像 链接:https://www.biqukan.com/63_63579/ 作者:小飞鸟大和田 章节:第96章 被看穿 章节链接:https://www.biqukan.com/63_63579/472379771.html
+2019-04-22 18:40:45,691 INFO ikantxt2[line:125] 类型:[其他小说] 名称:仙帝是一个女孩子 链接:https://www.biqukan.com/63_63290/ 作者:妖酒 章节:第一百一十四章 除灵师学院 章节链接:https://www.biqukan.com/63_63290/472872241.html
+2019-04-22 18:40:45,693 INFO ikantxt2[line:125] 类型:[网游小说] 名称:我想当巨星 链接:https://www.biqukan.com/62_62544/ 作者:临河羡鱼翁 章节:第147章 得分爆发力（4/5） 章节链接:https://www.biqukan.com/62_62544/472221129.html
+2019-04-22 18:40:45,693 INFO ikantxt2[line:125] 类型:[其他小说] 名称:抢个女鬼做新娘 链接:https://www.biqukan.com/62_62572/ 作者:古金羽生 章节:第122章第一任天帝 章节链接:https://www.biqukan.com/62_62572/472297638.html
+2019-04-22 18:40:45,694 INFO ikantxt2[line:125] 类型:[其他小说] 名称:听说我是叛徒 链接:https://www.biqukan.com/63_63470/ 作者:一棵鲸鱼树 章节:第六十六章 全能的冰人（八） 章节链接:https://www.biqukan.com/63_63470/472248923.html
+2019-04-22 18:40:45,694 INFO ikantxt2[line:125] 类型:[网游小说] 名称:异界全能领主 链接:https://www.biqukan.com/60_60994/ 作者:何家小兵兵 章节:第二百五十七章狩猎巨颅地精（2/4） 章节链接:https://www.biqukan.com/60_60994/472291526.html
+2019-04-22 18:40:45,696 INFO ikantxt2[line:191] download 妖孽王爷的呆萌狂妃 to /downloads/小说/[其他]/unknown/妖孽王爷的呆萌狂妃.txt
+2019-04-22 18:40:46,532 INFO ikantxt2[line:230] 开始下载妖孽王爷的呆萌狂妃:
+2019-04-22 18:40:46,532 INFO ikantxt2[line:234] section_name:[第一章 圣杀归来], url:[https://www.biqukan.com/64_64467/38851756.html]
+2019-04-22 18:40:47,296 INFO ikantxt2[line:237]   已下载:1.75% 下载1章 总共57章
+2019-04-22 18:40:47,296 INFO ikantxt2[line:234] section_name:[第二章 妖孽美男], url:[https://www.biqukan.com/64_64467/38851744.html]
+2019-04-22 18:40:48,075 INFO ikantxt2[line:237]   已下载:3.51% 下载2章 总共57章
+2019-04-22 18:40:48,075 INFO ikantxt2[line:234] section_name:[第三章 邪兵杀刃], url:[https://www.biqukan.com/64_64467/38851740.html]
+2019-04-22 18:40:48,865 INFO ikantxt2[line:237]   已下载:5.26% 下载3章 总共57章
+2019-04-22 18:40:48,865 INFO ikantxt2[line:234] section_name:[第四章 上官琉璃受辱], url:[https://www.biqukan.com/64_64467/38851732.html]
+2019-04-22 18:40:49,614 INFO ikantxt2[line:237]   已下载:7.02% 下载4章 总共57章
+2019-04-22 18:40:49,615 INFO ikantxt2[line:234] section_name:[第五章 剥皮], url:[https://www.biqukan.com/64_64467/38838778.html]
+2019-04-22 18:40:51,005 INFO ikantxt2[line:237]   已下载:8.77% 下载5章 总共57章
+2019-04-22 18:40:51,006 INFO ikantxt2[line:234] section_name:[第六章 凤凰泣血], url:[https://www.biqukan.com/64_64467/38838757.html]
+2019-04-22 18:40:51,724 INFO ikantxt2[line:237]   已下载:10.53% 下载6章 总共57章
+2019-04-22 18:40:51,726 INFO ikantxt2[line:234] section_name:[第七章 上官琉璃死了？], url:[https://www.biqukan.com/64_64467/38838737.html]
+2019-04-22 18:40:52,440 INFO ikantxt2[line:237]   已下载:12.28% 下载7章 总共57章
+2019-04-22 18:40:52,440 INFO ikantxt2[line:234] section_name:[第八章 上官琉璃被拐跑了！], url:[https://www.biqukan.com/64_64467/38833076.html]
+2019-04-22 18:40:53,151 INFO ikantxt2[line:237]   已下载:14.04% 下载8章 总共57章
+2019-04-22 18:40:53,151 INFO ikantxt2[line:234] section_name:[第九章 杀燕腾云], url:[https://www.biqukan.com/64_64467/38831132.html]
+2019-04-22 18:40:53,871 INFO ikantxt2[line:237]   已下载:15.79% 下载9章 总共57章
+2019-04-22 18:40:53,871 INFO ikantxt2[line:234] section_name:[第十章 雷雨夜], url:[https://www.biqukan.com/64_64467/38833067.html]
+2019-04-22 18:40:54,575 INFO ikantxt2[line:237]   已下载:17.54% 下载10章 总共57章
+2019-04-22 18:40:54,575 INFO ikantxt2[line:234] section_name:[第十一章 坑你没商量], url:[https://www.biqukan.com/64_64467/38833066.html]
+2019-04-22 18:40:55,289 INFO ikantxt2[line:237]   已下载:19.30% 下载11章 总共57章
+2019-04-22 18:40:55,289 INFO ikantxt2[line:234] section_name:[第十二章 极阴之地], url:[https://www.biqukan.com/64_64467/38827925.html]
+2019-04-22 18:40:55,984 INFO ikantxt2[line:237]   已下载:21.05% 下载12章 总共57章
+2019-04-22 18:40:55,984 INFO ikantxt2[line:234] section_name:[第十三章 莫忘城], url:[https://www.biqukan.com/64_64467/38827875.html]
+2019-04-22 18:40:56,670 INFO ikantxt2[line:237]   已下载:22.81% 下载13章 总共57章
+2019-04-22 18:40:56,671 INFO ikantxt2[line:234] section_name:[第十四章 杀人夜], url:[https://www.biqukan.com/64_64467/38827865.html]
+2019-04-22 18:40:57,384 INFO ikantxt2[line:237]   已下载:24.56% 下载14章 总共57章
+2019-04-22 18:40:57,384 INFO ikantxt2[line:234] section_name:[第十五章 死亡之地], url:[https://www.biqukan.com/64_64467/38824116.html]
+2019-04-22 18:40:58,096 INFO ikantxt2[line:237]   已下载:26.32% 下载15章 总共57章
+2019-04-22 18:40:58,098 INFO ikantxt2[line:234] section_name:[第十六章 杀刃现], url:[https://www.biqukan.com/64_64467/38822093.html]
+2019-04-22 18:40:58,776 INFO ikantxt2[line:237]   已下载:28.07% 下载16章 总共57章
+2019-04-22 18:40:58,776 INFO ikantxt2[line:234] section_name:[第十七章 白衣锦瑟], url:[https://www.biqukan.com/64_64467/38811021.html]
+2019-04-22 18:40:59,484 INFO ikantxt2[line:237]   已下载:29.82% 下载17章 总共57章
+2019-04-22 18:40:59,486 INFO ikantxt2[line:234] section_name:[第十八章 沼泽鳄], url:[https://www.biqukan.com/64_64467/38811003.html]
+2019-04-22 18:41:00,216 INFO ikantxt2[line:237]   已下载:31.58% 下载18章 总共57章
+2019-04-22 18:41:00,217 INFO ikantxt2[line:234] section_name:[第十九章 青鸾火凤], url:[https://www.biqukan.com/64_64467/38805141.html]
+2019-04-22 18:41:00,930 INFO ikantxt2[line:237]   已下载:33.33% 下载19章 总共57章
+2019-04-22 18:41:00,933 INFO ikantxt2[line:234] section_name:[第二十章 小凤凰与小乌鸦], url:[https://www.biqukan.com/64_64467/38805132.html]
+2019-04-22 18:41:02,263 INFO ikantxt2[line:237]   已下载:35.09% 下载20章 总共57章
+2019-04-22 18:41:02,263 INFO ikantxt2[line:234] section_name:[第二十一章 四圣兽祭坛], url:[https://www.biqukan.com/64_64467/38731884.html]
+2019-04-22 18:41:03,086 INFO ikantxt2[line:237]   已下载:36.84% 下载21章 总共57章
+2019-04-22 18:41:03,086 INFO ikantxt2[line:234] section_name:[第二十二章 万鸟齐哀], url:[https://www.biqukan.com/64_64467/38728688.html]
+2019-04-22 18:41:03,795 INFO ikantxt2[line:237]   已下载:38.60% 下载22章 总共57章
+2019-04-22 18:41:03,796 INFO ikantxt2[line:234] section_name:[第二十三章 凰鸟之殇], url:[https://www.biqukan.com/64_64467/38723916.html]
+2019-04-22 18:41:04,513 INFO ikantxt2[line:237]   已下载:40.35% 下载23章 总共57章
+2019-04-22 18:41:04,515 INFO ikantxt2[line:234] section_name:[第二十四 封印杀刃], url:[https://www.biqukan.com/64_64467/38720066.html]
+2019-04-22 18:41:05,221 INFO ikantxt2[line:237]   已下载:42.11% 下载24章 总共57章
+2019-04-22 18:41:05,223 INFO ikantxt2[line:234] section_name:[第二十五章 围杀燕腾云], url:[https://www.biqukan.com/64_64467/38715519.html]
+2019-04-22 18:41:05,947 INFO ikantxt2[line:237]   已下载:43.86% 下载25章 总共57章
+2019-04-22 18:41:05,947 INFO ikantxt2[line:234] section_name:[第二十六章 绝笔信], url:[https://www.biqukan.com/64_64467/38710552.html]
+2019-04-22 18:41:06,703 INFO ikantxt2[line:237]   已下载:45.61% 下载26章 总共57章
+2019-04-22 18:41:06,703 INFO ikantxt2[line:234] section_name:[第二十七章 燕腾云长眠], url:[https://www.biqukan.com/64_64467/38458009.html]
+2019-04-22 18:41:07,423 INFO ikantxt2[line:237]   已下载:47.37% 下载27章 总共57章
+2019-04-22 18:41:07,424 INFO ikantxt2[line:234] section_name:[第二十八章 白无痕], url:[https://www.biqukan.com/64_64467/38457997.html]
+2019-04-22 18:41:08,140 INFO ikantxt2[line:237]   已下载:49.12% 下载28章 总共57章
+2019-04-22 18:41:08,141 INFO ikantxt2[line:234] section_name:[第二十九章 十步幻影], url:[https://www.biqukan.com/64_64467/38452240.html]
+2019-04-22 18:41:08,861 INFO ikantxt2[line:237]   已下载:50.88% 下载29章 总共57章
+2019-04-22 18:41:08,864 INFO ikantxt2[line:234] section_name:[第三十章 残兵残灵], url:[https://www.biqukan.com/64_64467/38452227.html]
+2019-04-22 18:41:09,568 INFO ikantxt2[line:237]   已下载:52.63% 下载30章 总共57章
+2019-04-22 18:41:09,569 INFO ikantxt2[line:234] section_name:[第三十一章 婚约将至], url:[https://www.biqukan.com/64_64467/38448263.html]
+2019-04-22 18:41:10,286 INFO ikantxt2[line:237]   已下载:54.39% 下载31章 总共57章
+2019-04-22 18:41:10,288 INFO ikantxt2[line:234] section_name:[第三十二章 上官琉璃回府], url:[https://www.biqukan.com/64_64467/38448261.html]
+2019-04-22 18:41:11,010 INFO ikantxt2[line:237]   已下载:56.14% 下载32章 总共57章
+2019-04-22 18:41:11,012 INFO ikantxt2[line:234] section_name:[第三十三章 喂粥], url:[https://www.biqukan.com/64_64467/38439507.html]
+2019-04-22 18:41:11,726 INFO ikantxt2[line:237]   已下载:57.89% 下载33章 总共57章
+2019-04-22 18:41:11,729 INFO ikantxt2[line:234] section_name:[第三十四章 炼器堂风波], url:[https://www.biqukan.com/64_64467/38439491.html]
+2019-04-22 18:41:12,430 INFO ikantxt2[line:237]   已下载:59.65% 下载34章 总共57章
+2019-04-22 18:41:12,430 INFO ikantxt2[line:234] section_name:[第三十五章 阿锤被捕], url:[https://www.biqukan.com/64_64467/38434937.html]
+2019-04-22 18:41:13,154 INFO ikantxt2[line:237]   已下载:61.40% 下载35章 总共57章
+2019-04-22 18:41:13,157 INFO ikantxt2[line:234] section_name:[第三十六章 再遇蓝澈], url:[https://www.biqukan.com/64_64467/38434929.html]
+2019-04-22 18:41:13,861 INFO ikantxt2[line:237]   已下载:63.16% 下载36章 总共57章
+2019-04-22 18:41:13,862 INFO ikantxt2[line:234] section_name:[第三十七章 砸赌坊], url:[https://www.biqukan.com/64_64467/38430110.html]
+2019-04-22 18:41:14,591 INFO ikantxt2[line:237]   已下载:64.91% 下载37章 总共57章
+2019-04-22 18:41:14,592 INFO ikantxt2[line:234] section_name:[第三十八章 蓝澈怒了], url:[https://www.biqukan.com/64_64467/38430107.html]
+2019-04-22 18:41:15,312 INFO ikantxt2[line:237]   已下载:66.67% 下载38章 总共57章
+2019-04-22 18:41:15,313 INFO ikantxt2[line:234] section_name:[第三十九章 羽幻影], url:[https://www.biqukan.com/64_64467/38424664.html]
+2019-04-22 18:41:16,005 INFO ikantxt2[line:237]   已下载:68.42% 下载39章 总共57章
+2019-04-22 18:41:16,006 INFO ikantxt2[line:234] section_name:[第四十章 宫中有请], url:[https://www.biqukan.com/64_64467/38419372.html]
+2019-04-22 18:41:16,698 INFO ikantxt2[line:237]   已下载:70.18% 下载40章 总共57章
+2019-04-22 18:41:16,700 INFO ikantxt2[line:234] section_name:[第四十一章 太后张敏], url:[https://www.biqukan.com/64_64467/38414332.html]
+2019-04-22 18:41:17,410 INFO ikantxt2[line:237]   已下载:71.93% 下载41章 总共57章
+2019-04-22 18:41:17,411 INFO ikantxt2[line:234] section_name:[第四十二章 妹子，吃面条不], url:[https://www.biqukan.com/64_64467/38409006.html]
+2019-04-22 18:41:18,125 INFO ikantxt2[line:237]   已下载:73.68% 下载42章 总共57章
+2019-04-22 18:41:18,127 INFO ikantxt2[line:234] section_name:[第四十三章 上官大人，您的##被偷了。], url:[https://www.biqukan.com/64_64467/38397516.html]
+2019-04-22 18:41:18,851 INFO ikantxt2[line:237]   已下载:75.44% 下载43章 总共57章
+2019-04-22 18:41:18,851 INFO ikantxt2[line:234] section_name:[第四十四章 虚凝秘境与永恒之心], url:[https://www.biqukan.com/64_64467/38390995.html]
+2019-04-22 18:41:19,571 INFO ikantxt2[line:237]   已下载:77.19% 下载44章 总共57章
+2019-04-22 18:41:19,572 INFO ikantxt2[line:234] section_name:[第四十五章 上官琉璃的婚事], url:[https://www.biqukan.com/64_64467/38384579.html]
+2019-04-22 18:41:20,280 INFO ikantxt2[line:237]   已下载:78.95% 下载45章 总共57章
+2019-04-22 18:41:20,280 INFO ikantxt2[line:234] section_name:[第四十六章 及笄之日], url:[https://www.biqukan.com/64_64467/38378821.html]
+2019-04-22 18:41:21,000 INFO ikantxt2[line:237]   已下载:80.70% 下载46章 总共57章
+2019-04-22 18:41:21,002 INFO ikantxt2[line:234] section_name:[第四十七章 为主而死，主予重生。], url:[https://www.biqukan.com/64_64467/38374020.html]
+2019-04-22 18:41:21,734 INFO ikantxt2[line:237]   已下载:82.46% 下载47章 总共57章
+2019-04-22 18:41:21,734 INFO ikantxt2[line:234] section_name:[第四十八章 黄金血液], url:[https://www.biqukan.com/64_64467/38296954.html]
+2019-04-22 18:41:23,140 INFO ikantxt2[line:237]   已下载:84.21% 下载48章 总共57章
+2019-04-22 18:41:23,141 INFO ikantxt2[line:234] section_name:[第四十九章 海棠近妖], url:[https://www.biqukan.com/64_64467/38290765.html]
+2019-04-22 18:41:23,861 INFO ikantxt2[line:237]   已下载:85.96% 下载49章 总共57章
+2019-04-22 18:41:23,861 INFO ikantxt2[line:234] section_name:[第五十章 以国号封王，以帝宸为名。], url:[https://www.biqukan.com/64_64467/38279533.html]
+2019-04-22 18:41:24,571 INFO ikantxt2[line:237]   已下载:87.72% 下载50章 总共57章
+2019-04-22 18:41:24,572 INFO ikantxt2[line:234] section_name:[第五十一章 劝君莫惜金缕衣], url:[https://www.biqukan.com/64_64467/38273451.html]
+2019-04-22 18:41:25,288 INFO ikantxt2[line:237]   已下载:89.47% 下载51章 总共57章
+2019-04-22 18:41:25,289 INFO ikantxt2[line:234] section_name:[第五十二章 小雪花，偶喜欢你。], url:[https://www.biqukan.com/64_64467/38269442.html]
+2019-04-22 18:41:26,003 INFO ikantxt2[line:237]   已下载:91.23% 下载52章 总共57章
+2019-04-22 18:41:26,005 INFO ikantxt2[line:234] section_name:[第五十三章 金之灵大显神威？], url:[https://www.biqukan.com/64_64467/38264727.html]
+2019-04-22 18:41:26,726 INFO ikantxt2[line:237]   已下载:92.98% 下载53章 总共57章
+2019-04-22 18:41:26,726 INFO ikantxt2[line:234] section_name:[第五十四章 姬彩儿与凤焚天], url:[https://www.biqukan.com/64_64467/38258315.html]
+2019-04-22 18:41:27,444 INFO ikantxt2[line:237]   已下载:94.74% 下载54章 总共57章
+2019-04-22 18:41:27,446 INFO ikantxt2[line:234] section_name:[第五十五章 三人混战，都是敌人！], url:[https://www.biqukan.com/64_64467/38253903.html]
+2019-04-22 18:41:28,151 INFO ikantxt2[line:237]   已下载:96.49% 下载55章 总共57章
+2019-04-22 18:41:28,151 INFO ikantxt2[line:234] section_name:[第五十六章 千年恩怨], url:[https://www.biqukan.com/64_64467/38249292.html]
+2019-04-22 18:41:29,065 INFO ikantxt2[line:237]   已下载:98.25% 下载56章 总共57章
+2019-04-22 18:41:29,065 INFO ikantxt2[line:239] section_name:第五十六章 千年恩怨1 biqukan.com, url:https://www.biqukan.com/64_64467/38249292.html
+2019-04-22 18:41:29,065 INFO ikantxt2[line:240]   已下载:100.00% 已下载57章 总共57章
+2019-04-22 18:41:29,065 INFO ikantxt2[line:241] 下载<<妖孽王爷的呆萌狂妃>>完成
+2019-04-22 18:41:29,071 INFO ikantxt2[line:263]  妖孽王爷的呆萌狂妃 下载完成 已经下载1本，剩余182本
+2019-04-22 18:41:59,072 INFO ikantxt2[line:191] download 南溪醉 to /downloads/小说/[修真小说]/余喵喵/南溪醉.txt
+2019-04-22 18:42:00,167 INFO ikantxt2[line:230] 开始下载南溪醉:
+2019-04-22 18:42:00,167 INFO ikantxt2[line:234] section_name:[起初], url:[https://www.biqukan.com/63_63695/16565082.html]
+2019-04-22 18:42:00,941 INFO ikantxt2[line:237]   已下载:0.28% 下载1章 总共355章
+2019-04-22 18:42:00,941 INFO ikantxt2[line:234] section_name:[第二章 他是什么人], url:[https://www.biqukan.com/63_63695/2731050.html]
+2019-04-22 18:42:01,743 INFO ikantxt2[line:237]   已下载:0.56% 下载2章 总共355章
+2019-04-22 18:42:01,743 INFO ikantxt2[line:234] section_name:[第三章 禁术之谜], url:[https://www.biqukan.com/63_63695/812612.html]
+2019-04-22 18:42:02,535 INFO ikantxt2[line:237]   已下载:0.85% 下载3章 总共355章
+2019-04-22 18:42:02,536 INFO ikantxt2[line:234] section_name:[第四章 她引发的灾难], url:[https://www.biqukan.com/63_63695/50427162.html]
+2019-04-22 18:42:03,230 INFO ikantxt2[line:237]   已下载:1.13% 下载4章 总共355章
+2019-04-22 18:42:03,232 INFO ikantxt2[line:234] section_name:[第五章 遇事莫慌], url:[https://www.biqukan.com/63_63695/49446301.html]
+2019-04-22 18:42:03,943 INFO ikantxt2[line:237]   已下载:1.41% 下载5章 总共355章
+2019-04-22 18:42:03,944 INFO ikantxt2[line:234] section_name:[第六章 濒临死亡的那一刻], url:[https://www.biqukan.com/63_63695/48570349.html]
+2019-04-22 18:42:04,660 INFO ikantxt2[line:237]   已下载:1.69% 下载6章 总共355章
+2019-04-22 18:42:04,661 INFO ikantxt2[line:234] section_name:[第七章 沉睡在花海中], url:[https://www.biqukan.com/63_63695/48570301.html]
+2019-04-22 18:42:05,368 INFO ikantxt2[line:237]   已下载:1.97% 下载7章 总共355章
+2019-04-22 18:42:05,368 INFO ikantxt2[line:234] section_name:[第八章 她终于醒了], url:[https://www.biqukan.com/63_63695/48519112.html]
+2019-04-22 18:42:06,361 INFO ikantxt2[line:237]   已下载:2.25% 下载8章 总共355章
+2019-04-22 18:42:06,362 INFO ikantxt2[line:234] section_name:[第九章 那熟悉的宝物], url:[https://www.biqukan.com/63_63695/47392855.html]
+2019-04-22 18:42:07,094 INFO ikantxt2[line:237]   已下载:2.54% 下载9章 总共355章
+2019-04-22 18:42:07,095 INFO ikantxt2[line:234] section_name:[第十章 哥哥的抉择], url:[https://www.biqukan.com/63_63695/46715704.html]
+2019-04-22 18:42:07,786 INFO ikantxt2[line:237]   已下载:2.82% 下载10章 总共355章
+2019-04-22 18:42:07,788 INFO ikantxt2[line:234] section_name:[第十一章 十分荒谬的事情], url:[https://www.biqukan.com/63_63695/46117977.html]
+2019-04-22 18:42:08,509 INFO ikantxt2[line:237]   已下载:3.10% 下载11章 总共355章
+2019-04-22 18:42:08,510 INFO ikantxt2[line:234] section_name:[第十二章 考核开始], url:[https://www.biqukan.com/63_63695/45620650.html]
+2019-04-22 18:42:09,207 INFO ikantxt2[line:237]   已下载:3.38% 下载12章 总共355章
+2019-04-22 18:42:09,207 INFO ikantxt2[line:234] section_name:[第十三章 完美], url:[https://www.biqukan.com/63_63695/45607849.html]
+2019-04-22 18:42:09,908 INFO ikantxt2[line:237]   已下载:3.66% 下载13章 总共355章
+2019-04-22 18:42:09,910 INFO ikantxt2[line:234] section_name:[第十四章 还是暴露了], url:[https://www.biqukan.com/63_63695/45593215.html]
+2019-04-22 18:42:10,637 INFO ikantxt2[line:237]   已下载:3.94% 下载14章 总共355章
+2019-04-22 18:42:10,638 INFO ikantxt2[line:234] section_name:[第十四章 还是发生了], url:[https://www.biqukan.com/63_63695/45575936.html]
+2019-04-22 18:42:11,354 INFO ikantxt2[line:237]   已下载:4.23% 下载15章 总共355章
+2019-04-22 18:42:11,355 INFO ikantxt2[line:234] section_name:[第十五章 离去], url:[https://www.biqukan.com/63_63695/45563124.html]
+2019-04-22 18:42:12,069 INFO ikantxt2[line:237]   已下载:4.51% 下载16章 总共355章
+2019-04-22 18:42:12,071 INFO ikantxt2[line:234] section_name:[第十七章 异常的事情], url:[https://www.biqukan.com/63_63695/45547111.html]
+2019-04-22 18:42:12,770 INFO ikantxt2[line:237]   已下载:4.79% 下载17章 总共355章
+2019-04-22 18:42:12,772 INFO ikantxt2[line:234] section_name:[第十九章 怪异的病状], url:[https://www.biqukan.com/63_63695/45538994.html]
+2019-04-22 18:42:13,489 INFO ikantxt2[line:237]   已下载:5.07% 下载18章 总共355章
+2019-04-22 18:42:13,489 INFO ikantxt2[line:234] section_name:[第二十章 终于有眉目了], url:[https://www.biqukan.com/63_63695/45504810.html]
+2019-04-22 18:42:14,200 INFO ikantxt2[line:237]   已下载:5.35% 下载19章 总共355章
+2019-04-22 18:42:14,201 INFO ikantxt2[line:234] section_name:[第二十一章 真相快大白了], url:[https://www.biqukan.com/63_63695/45488226.html]
+2019-04-22 18:42:14,921 INFO ikantxt2[line:237]   已下载:5.63% 下载20章 总共355章
+2019-04-22 18:42:14,924 INFO ikantxt2[line:234] section_name:[第二十二章 事情不太好啊], url:[https://www.biqukan.com/63_63695/45472864.html]
+2019-04-22 18:42:15,641 INFO ikantxt2[line:237]   已下载:5.92% 下载21章 总共355章
+2019-04-22 18:42:15,642 INFO ikantxt2[line:234] section_name:[第二十三章 夜半捉鬼], url:[https://www.biqukan.com/63_63695/45457320.html]
+2019-04-22 18:42:16,361 INFO ikantxt2[line:237]   已下载:6.20% 下载22章 总共355章
+2019-04-22 18:42:16,361 INFO ikantxt2[line:234] section_name:[第二十三张 瑜安上神], url:[https://www.biqukan.com/63_63695/45444414.html]
+2019-04-22 18:42:17,078 INFO ikantxt2[line:237]   已下载:6.48% 下载23章 总共355章
+2019-04-22 18:42:17,082 INFO ikantxt2[line:234] section_name:[第二十四章 危机], url:[https://www.biqukan.com/63_63695/45429703.html]
+2019-04-22 18:42:17,799 INFO ikantxt2[line:237]   已下载:6.76% 下载24章 总共355章
+2019-04-22 18:42:17,801 INFO ikantxt2[line:234] section_name:[第二十五章 再现], url:[https://www.biqukan.com/63_63695/45416781.html]
+2019-04-22 18:42:18,523 INFO ikantxt2[line:237]   已下载:7.04% 下载25章 总共355章
+2019-04-22 18:42:18,523 INFO ikantxt2[line:234] section_name:[第二十六章 离去], url:[https://www.biqukan.com/63_63695/45401160.html]
+2019-04-22 18:42:19,242 INFO ikantxt2[line:237]   已下载:7.32% 下载26章 总共355章
+2019-04-22 18:42:19,243 INFO ikantxt2[line:234] section_name:[第二十六章 新的开始], url:[https://www.biqukan.com/63_63695/45388237.html]
+2019-04-22 18:42:19,969 INFO ikantxt2[line:237]   已下载:7.61% 下载27章 总共355章
+2019-04-22 18:42:19,970 INFO ikantxt2[line:234] section_name:[第二十七章 终于出现了], url:[https://www.biqukan.com/63_63695/45374002.html]
+2019-04-22 18:42:20,674 INFO ikantxt2[line:237]   已下载:7.89% 下载28章 总共355章
+2019-04-22 18:42:20,676 INFO ikantxt2[line:234] section_name:[第二十八章], url:[https://www.biqukan.com/63_63695/45360026.html]
+2019-04-22 18:42:21,484 INFO ikantxt2[line:237]   已下载:8.17% 下载29章 总共355章
+2019-04-22 18:42:21,486 INFO ikantxt2[line:234] section_name:[第二十九章 原来那么轻松], url:[https://www.biqukan.com/63_63695/45351062.html]
+2019-04-22 18:42:22,203 INFO ikantxt2[line:237]   已下载:8.45% 下载30章 总共355章
+2019-04-22 18:42:22,204 INFO ikantxt2[line:234] section_name:[第三十章 你醒了], url:[https://www.biqukan.com/63_63695/45332484.html]
+2019-04-22 18:42:22,930 INFO ikantxt2[line:237]   已下载:8.73% 下载31章 总共355章
+2019-04-22 18:42:22,931 INFO ikantxt2[line:234] section_name:[第三十一章 迷路中], url:[https://www.biqukan.com/63_63695/45249435.html]
+2019-04-22 18:42:23,654 INFO ikantxt2[line:237]   已下载:9.01% 下载32章 总共355章
+2019-04-22 18:42:23,657 INFO ikantxt2[line:234] section_name:[第三十二章 误入密室], url:[https://www.biqukan.com/63_63695/45237521.html]
+2019-04-22 18:42:24,380 INFO ikantxt2[line:237]   已下载:9.30% 下载33章 总共355章
+2019-04-22 18:42:24,381 INFO ikantxt2[line:234] section_name:[第三十二章 旧病复发], url:[https://www.biqukan.com/63_63695/45223596.html]
+2019-04-22 18:42:25,098 INFO ikantxt2[line:237]   已下载:9.58% 下载34章 总共355章
+2019-04-22 18:42:25,099 INFO ikantxt2[line:234] section_name:[第三十四章 老白and小黑], url:[https://www.biqukan.com/63_63695/45215069.html]
+2019-04-22 18:42:25,790 INFO ikantxt2[line:237]   已下载:9.86% 下载35章 总共355章
+2019-04-22 18:42:25,790 INFO ikantxt2[line:234] section_name:[第三十四章 东方银雪], url:[https://www.biqukan.com/63_63695/45195372.html]
+2019-04-22 18:42:26,525 INFO ikantxt2[line:237]   已下载:10.14% 下载36章 总共355章
+2019-04-22 18:42:26,526 INFO ikantxt2[line:234] section_name:[第三十五章 昏厥], url:[https://www.biqukan.com/63_63695/45184613.html]
+2019-04-22 18:42:27,243 INFO ikantxt2[line:237]   已下载:10.42% 下载37章 总共355章
+2019-04-22 18:42:27,244 INFO ikantxt2[line:234] section_name:[第三十六章 求情], url:[https://www.biqukan.com/63_63695/45173102.html]
+2019-04-22 18:42:27,976 INFO ikantxt2[line:237]   已下载:10.70% 下载38章 总共355章
+2019-04-22 18:42:27,977 INFO ikantxt2[line:234] section_name:[第三十七章 冥君变了], url:[https://www.biqukan.com/63_63695/45159508.html]

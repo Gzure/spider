@@ -231,16 +231,14 @@ class downloader(object):
         length = len(self.urls)
         for i, (section_name, url) in enumerate(self.urls):
             if not self.bfilter.add(url):
-                LOG.info('section_name:%s, url:%s' % (section_name, url))
+                LOG.info('section_name:[%s], url:[%s]' % (section_name, url))
                 text = self.get_contents(url)
-                LOG.info('get text ok')
                 self.writer(section_name, text)
-                LOG.info('write text ok')
                 LOG.info(u"  已下载:%.2f%% 下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
             else:
                 LOG.info('section_name:%s, url:%s' % (section_name, url))
                 LOG.info(u"  已下载:%.2f%% 已下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
-        LOG.info(u'下载%s完成' % self.name)
+        LOG.info(u'下载<<%s>>完成' % self.name)
         self.close()
 
     def close(self):
@@ -252,6 +250,11 @@ def start():
         book_urls = find_new_storage_block()
         book_urls += find_recommend_block(u'强力推荐')
         book_urls += find_type_block(u'玄幻小说')
+        book_urls += find_type_block(u'修真小说')
+        book_urls += find_type_block(u'都市小说')
+        book_urls += find_type_block(u'穿越小说')
+        book_urls += find_type_block(u'网游小说')
+        book_urls += find_type_block(u'科幻小说')
         book_urls += find_wanben()
         new_updates = find_new_update_block()
         book_num = len(book_urls) + len(new_updates)
@@ -277,7 +280,6 @@ if __name__ == '__main__':
         book_urls = find_new_storage_block()
         book_urls += find_recommend_block(u'强力推荐')
         book_urls += find_type_block(u'玄幻小说')
-        raise Exception('hello')
         new_updates = find_new_update_block()
         book_num = len(book_urls) + len(new_updates)
         for i, (type, name, author, url) in enumerate(book_urls):
