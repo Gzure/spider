@@ -89,8 +89,9 @@ def log_detail():
     reg = re.compile('^[\d]{4}-[\d]{2}-[\d]{2}')
     f = codecs.open('spider.log', 'rb', 'utf-8')
     # f = open('spider.log', 'rb')
-    lines = f.readlines(500)
+    lines = f.readlines()
     f.close()
+    lines = lines[-1000:]
     res = []
     for line in lines:
         if reg.match(line):
