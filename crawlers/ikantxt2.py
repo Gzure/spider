@@ -23,8 +23,8 @@ features = 'lxml'
 url = 'https://www.biqukan.com'
 wan_ben_url = 'https://www.biqukan.com/wanben'
 bf_file = 'ikantxt2'
-# base_dir = u'/downloads/小说'
-base_dir = u'小说'
+base_dir = u'/downloads/小说'
+# base_dir = u'小说'
 content_f = re.compile(u'.*正文卷')
 
 req = requests.get(url = url, timeout=10)

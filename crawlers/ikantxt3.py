@@ -224,7 +224,8 @@ def start():
         bf = BloomFilter(500000)
 
     try:
-        book_urls = find_new_storage_block(index)
+        book_urls = find_wanben()
+        book_urls += find_new_storage_block(index)
         book_urls += find_recommend_block(index, u'强力推荐')
         book_urls += find_type_block(index, u'玄幻小说')
         book_urls += find_type_block(index, u'修真小说')

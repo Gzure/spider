@@ -237,7 +237,8 @@ def start():
 
     try:
         pool = Pool(size=pool_size)
-        book_urls = find_new_storage_block(index)
+        book_urls = find_wanben()
+        book_urls += find_new_storage_block(index)
         book_urls += find_recommend_block(index, u'强力推荐')
         book_urls += find_type_block(index, u'玄幻小说')
         book_urls += find_type_block(index, u'修真小说')
@@ -246,7 +247,6 @@ def start():
         book_urls += find_type_block(index, u'网游小说')
         book_urls += find_type_block(index, u'科幻小说')
         book_urls += find_new_update_block(index)
-        book_urls += find_wanben()
         book_num = len(book_urls)
         for i, url in enumerate(book_urls):
             pool.spawn(download_book, url, bf)
