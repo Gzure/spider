@@ -16,68 +16,68 @@
 
     <div class="row">
         <div class="col-md-12">
-        <h2>添加任务</h2>
-        <form class="needs-validation"  action="/task/add" method="post" enctype="multipart/form-data" novalidate>
-            <div class="form-group row">
-                <div class="col-md-4 mb-3">
-                    <label class="control-label col-md-4">名称</label>
-                    <input class="form-control" type="text" name="id" required>
+            <h2>添加任务</h2>
+            <form class="needs-validation"  action="/task/add" method="post" enctype="multipart/form-data" novalidate>
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <label class="control-label col-md-4">名称</label>
+                        <input class="form-control" type="text" name="id" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="control-label col-md-4">方法</label>
+                        <input class="form-control" type="text" name="func">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="control-label col-md-4">python脚本</label>
+                        <input class="form-control" type="file" name="script">
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label class="control-label col-md-4">方法</label>
-                    <input class="form-control" type="text" name="func">
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <label class="control-label col-md-4">触发器</label>
+                        <select class="form-control" name="trigger">
+                            <option value="interval">interval</option>
+                            <option value="cron">cron</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8 mb-6">
+                        <label class="control-label col-md-4">具体日期</label>
+                        <input class="form-control" type="text" name="trigger_value" placeholder="eg: seconds=80">
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <label class="control-label col-md-4">python脚本</label>
-                    <input class="form-control" type="file" name="script">
+                <div class="form-group row">
+                    <div class="col-md-4 mb-3">
+                        <label class="control-label col-md-4">依赖库</label>
+                        <input class="form-control" type="text" name="depends" placeholder="eg: flask, pyboom">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4 mb-3">
-                    <label class="control-label col-md-4">触发器</label>
-                    <select class="form-control" name="trigger">
-                        <option value="interval">interval</option>
-                        <option value="cron">cron</option>
-                    </select>
-                </div>
-                <div class="col-md-8 mb-6">
-                    <label class="control-label col-md-4">具体日期</label>
-                    <input class="form-control" type="text" name="trigger_value" placeholder="eg: seconds:80">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md-4 mb-3">
-                    <label class="control-label col-md-4">依赖库</label>
-                    <input class="form-control" type="text" name="depends" placeholder="eg: flask, pyboom">
-                </div>
-            </div>
-            <button class="btn btn-primary pull-right" type="submit">添加</button>
-        </form>
+                <button class="btn btn-primary pull-right" type="submit">添加</button>
+            </form>
         </div>
     </div>
     <br/>
     <div class="row">
         <div class="col-md-12">
-        <h2>任务列表</h2>
-        <table id="tasks" class="table table-striped table-bordered table-hover">
-            <thead>
-                <tr>
-                    <th>名称</th>
-                    <th>方法</th>
-                    <th>触发类型</th>
-                    <th>具体时间</th>
-                    <th>开始日期</th>
-                    <th>下次运行时间</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-        </table>
+            <h2>任务列表</h2>
+            <table id="tasks" class="table table-striped table-bordered table-hover" width="100%">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>方法</th>
+                        <th>触发类型</th>
+                        <th>具体时间</th>
+                        <th>开始日期</th>
+                        <th>下次运行时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <h2>日志</h2>
-            <table id="log" class="table table-striped table-bordered table-hover">
+            <table id="log" class="table table-striped table-bordered table-hover" width="100%">
                 <thead>
                     <tr>
                         <th>时间</th>

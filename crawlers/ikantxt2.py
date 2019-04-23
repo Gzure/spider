@@ -17,7 +17,7 @@ except:
     logging.getLogger('apscheduler').setLevel(logging.DEBUG)
     LOG = logging.getLogger('apscheduler')
 
-features = 'html.parser'
+features = 'lxml'
 
 
 url = 'https://www.biqukan.com'
@@ -168,6 +168,7 @@ def writer(path, name, text):
         f.write(name + '\n')
         f.writelines(text)
         f.write('\n\n')
+
 
 class downloader(object):
 

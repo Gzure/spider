@@ -1,19 +1,22 @@
 # -*- coding:UTF-8 -*-
-from flask import Flask
-from flask_apscheduler import APScheduler
-from apscheduler.executors.pool import ThreadPoolExecutor
-from logging.handlers import RotatingFileHandler
-import logging
 import codecs
-from flask import request, Response, session, redirect
-from flask_apscheduler.json import jsonify
-from apscheduler.jobstores.base import ConflictingIdError, JobLookupError
-import os
 import commands
-from datetime import timedelta
-from apscheduler.events import EVENT_ALL
-import threading
+import logging
+import os
 import re
+import threading
+from datetime import timedelta
+from logging.handlers import RotatingFileHandler
+
+from apscheduler.events import EVENT_ALL
+from apscheduler.executors.pool import ThreadPoolExecutor
+from apscheduler.jobstores.base import ConflictingIdError, JobLookupError
+from flask import Flask
+from flask import request, session, redirect
+from flask_apscheduler import APScheduler
+from flask_apscheduler.json import jsonify
+
+import util
 
 # logging.basicConfig()
 # logging.getLogger('apscheduler').setLevel(logging.DEBUG)
@@ -160,10 +163,13 @@ def add_task():
 
     try:
         if scheduler.get_job(task['id']):
-            scheduler.modify_job(task['id'], **task)
-            job = scheduler.get_job(task['id'])
-        else:
-            job = scheduler.add_job(**task)
+            scheduler.remove_job(task['id'])
+
+        # if crawler file change, we should reload it
+        crawler_module = util.import_module(task['func'])
+        reload(crawler_module)
+
+        job = scheduler.add_job(**task)
         return redirect('/index.html')
     except ConflictingIdError:
         return jsonify(dict(error_message='Job %s already exists.' % task.get('id')), status=409)
@@ -213,7 +219,7 @@ def start_job(name):
 if __name__ == '__main__':
     init_log()
     init_secheduler()
-    app.run('0.0.0.0', 80, debug=False)
+    app.run('0.0.0.0', 8888, debug=False)
     # print log_detail()
 
 
