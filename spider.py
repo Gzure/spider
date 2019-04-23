@@ -12,9 +12,11 @@ import os
 import commands
 from datetime import timedelta
 from apscheduler.events import EVENT_ALL
+import threading
+import re
 
-logging.basicConfig()
-logging.getLogger('apscheduler').setLevel(logging.DEBUG)
+# logging.basicConfig()
+# logging.getLogger('apscheduler').setLevel(logging.DEBUG)
 
 app = Flask('spider', static_url_path='',
             static_folder='static')
@@ -30,6 +32,7 @@ password = 'admin'
 LOG = app.logger
 app.config['SECRET_KEY']= os.urandom(24)
 app.config['PERMANENT_SESSION_LIFETIME']=timedelta(days=1)
+
 
 # init log
 def init_log():
@@ -83,10 +86,24 @@ def upload_script():
 
 @app.route('/log')
 def log_detail():
-    f = codecs.open('spider.log', 'r', 'utf-8')
-    lines = f.readlines(1000)
+    reg = re.compile('^[\d]{4}-[\d]{2}-[\d]{2}')
+    f = codecs.open('spider.log', 'rb', 'utf-8')
+    # f = open('spider.log', 'rb')
+    lines = f.readlines()
     f.close()
-    return jsonify(lines)
+    lines = lines[-1000:]
+    res = []
+    for line in lines:
+        if reg.match(line):
+            line_array = line.strip().split(' ', 4)
+            line_info = {
+                'time': line_array[0] + ' ' + line_array[1],
+                'level': line_array[2],
+                'module': line_array[3],
+                'message': line_array[4]
+            }
+            res.append(line_info)
+    return jsonify(res)
 
 
 @app.route('/filter/add', methods=['POST'])
@@ -122,7 +139,8 @@ def add_task():
         path = 'crawlers/' + script.filename
         script.save(path)
     else:
-        del task['script']
+        if 'script' in task:
+            del task['script']
 
     depends = task.get('depends', None)
     if depends:
@@ -182,10 +200,21 @@ def update_task(name):
         return jsonify(dict(error_message=str(e)), status=500)
 
 
+@app.route('/task/<string:name>/start')
+def start_job(name):
+
+    job = scheduler.get_job(name)
+    if not job:
+        raise JobLookupError(name)
+
+    threading.Thread(target=job.func, args=job.args, kwargs=job.kwargs).start()
+    return 'ok'
+
 if __name__ == '__main__':
     init_log()
     init_secheduler()
-    app.run('0.0.0.0', 8888, debug=False)
+    app.run('0.0.0.0', 80, debug=False)
+    # print log_detail()
 
 
 

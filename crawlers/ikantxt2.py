@@ -23,8 +23,8 @@ features = 'html.parser'
 url = 'https://www.biqukan.com'
 wan_ben_url = 'https://www.biqukan.com/wanben'
 bf_file = 'ikantxt2'
-base_dir = u'/downloads/小说'
-# base_dir = u'小说'
+# base_dir = u'/downloads/小说'
+base_dir = u'小说'
 content_f = re.compile(u'.*正文卷')
 
 req = requests.get(url = url, timeout=10)
@@ -227,20 +227,18 @@ class downloader(object):
 
     def start(self):
         self.get_download_url()
-        LOG.info(u'开始下载%s:' % self.name)
+        LOG.info(u'开始下载《%s》:' % self.name)
         length = len(self.urls)
         for i, (section_name, url) in enumerate(self.urls):
             if not self.bfilter.add(url):
-                LOG.info('section_name:%s, url:%s' % (section_name, url))
+                # LOG.info('section_name:[%s], url:[%s]' % (section_name, url))
                 text = self.get_contents(url)
-                LOG.info('get text ok')
                 self.writer(section_name, text)
-                LOG.info('write text ok')
-                LOG.info(u"  已下载:%.2f%% 下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
-            else:
-                LOG.info('section_name:%s, url:%s' % (section_name, url))
-                LOG.info(u"  已下载:%.2f%% 已下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
-        LOG.info(u'下载%s完成' % self.name)
+                LOG.info(u"类型：%s <<%s>>  已下载:%.2f%% 下载%s章 总共%s章" % (self.type, self.name, float(i + 1) / float(length) * 100, i + 1, length) + '\r')
+            # else:
+            #     LOG.info('section_name:%s, url:%s' % (section_name, url))
+            #     LOG.info(u"  已下载:%.2f%% 已下载%s章 总共%s章" % (float(i + 1) / float(length) * 100, i + 1, length) + '\r')
+        LOG.info(u'下载<<%s>>完成' % self.name)
         self.close()
 
     def close(self):
@@ -252,18 +250,23 @@ def start():
         book_urls = find_new_storage_block()
         book_urls += find_recommend_block(u'强力推荐')
         book_urls += find_type_block(u'玄幻小说')
+        book_urls += find_type_block(u'修真小说')
+        book_urls += find_type_block(u'都市小说')
+        book_urls += find_type_block(u'穿越小说')
+        book_urls += find_type_block(u'网游小说')
+        book_urls += find_type_block(u'科幻小说')
         book_urls += find_wanben()
         new_updates = find_new_update_block()
         book_num = len(book_urls) + len(new_updates)
-        for i, (type, name, author, url) in enumerate(book_urls[:1]):
+        for i, (type, name, author, url) in enumerate(book_urls):
             download_book(type, name, author, url)
-            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i+1, book_num - i -1)
+            LOG.info(u' 《%s》 下载完成 已经下载%s本，剩余%s本', name, i+1, book_num - i -1)
             time.sleep(30)
 
         finished = len(book_urls)
         for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
             download_book(type, name, author, href)
-            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+            LOG.info(u' 《%s》 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
             time.sleep(30)
         LOG.info(u'下载完成')
     except Exception as e:
@@ -274,10 +277,10 @@ def start():
 
 if __name__ == '__main__':
     try:
-        book_urls = find_new_storage_block()
-        book_urls += find_recommend_block(u'强力推荐')
-        book_urls += find_type_block(u'玄幻小说')
-        raise Exception('hello')
+        # book_urls = find_new_storage_block()
+        # book_urls += find_recommend_block(u'强力推荐')
+        # book_urls += find_type_block(u'玄幻小说')
+        book_urls = find_wanben()
         new_updates = find_new_update_block()
         book_num = len(book_urls) + len(new_updates)
         for i, (type, name, author, url) in enumerate(book_urls):
@@ -285,11 +288,11 @@ if __name__ == '__main__':
             LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, i + 1, book_num - i - 1)
             time.sleep(30)
 
-        finished = len(book_urls)
-        for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
-            download_book(type, name, author, href)
-            LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
-            time.sleep(30)
+        # finished = len(book_urls)
+        # for i, (type, name, author, href, section_name, section_href) in enumerate(new_updates):
+        #     download_book(type, name, author, href)
+        #     LOG.info(u' %s 下载完成 已经下载%s本，剩余%s本', name, finished + i + 1, book_num - i - 1 - finished)
+        #     time.sleep(30)
         LOG.info(u'下载完成')
         bf.tofile(open(bf_file, 'w'))
     except Exception as e:
